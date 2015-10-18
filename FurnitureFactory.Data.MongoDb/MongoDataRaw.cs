@@ -4,8 +4,8 @@
 
     public class MongoDataRaw
     {
-            #region Series list
-            private readonly List<string> series = new List<string>()
+        #region Series list
+        private readonly List<string> series = new List<string>()
         {
             // Scandinavian names
             "Alvis",
@@ -44,16 +44,16 @@
             "Knasgowa",
             "Tsula"
          };
-            #endregion
+        #endregion
 
-            #region Types list
-            private readonly List<string> bedroomTypes = new List<string>()
+        #region Types list
+        private readonly List<string> bedroomTypes = new List<string>()
         {
             "Single bed",
             "Double bed"
         };
 
-            private readonly List<string> livingroomTypes = new List<string>()
+        private readonly List<string> livingroomTypes = new List<string>()
         {
             "Two-seat sofa",
             "Three-seat sofa",
@@ -66,42 +66,42 @@
             "Bookcase with glass doors",
             "Coffee table"
         };
-            #endregion
+        #endregion
 
-            private readonly List<string> rooms = new List<string>()
+        private readonly List<string> rooms = new List<string>()
         {
             "Bedroom",
             "Living room"
         };
 
-            public IList<string> GetSeriesNames()
-            {
-                return this.series;
-            }
+        public IList<string> GetSeriesNames()
+        {
+            return this.series;
+        }
 
-            public List<string> GetBedroomTypeNames()
-            {
-                return this.bedroomTypes;
-            }
+        public List<string> GetBedroomTypeNames()
+        {
+            return this.bedroomTypes;
+        }
 
-            public IList<string> GetLivingRoomTypeNames()
-            {
-                return this.livingroomTypes;
-            }
+        public IList<string> GetLivingRoomTypeNames()
+        {
+            return this.livingroomTypes;
+        }
 
-            public IList<string> GetAllTypeNames()
-            {
-                var allTypes = new List<string>();
+        public IList<string> GetAllTypeNames()
+        {
+            var allTypes = new List<string>();
 
-                allTypes.AddRange(this.bedroomTypes);
-                allTypes.AddRange(this.livingroomTypes);
+            allTypes.AddRange(this.bedroomTypes);
+            allTypes.AddRange(this.livingroomTypes);
 
-                return allTypes;
-            }
+            return allTypes;
+        }
 
-            public IList<string> GetRoomNames()
-            {
-                return this.rooms;
-            }
+        public IList<string> GetRoomNames()
+        {
+            return this.rooms;
+        }
     }
 }

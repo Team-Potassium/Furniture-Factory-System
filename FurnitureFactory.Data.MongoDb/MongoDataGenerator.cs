@@ -7,11 +7,11 @@
 
     public class MongoDataGenerator
     {
-        private static Random rnd = new Random();
+        private static Random randomGenerator = new Random();
 
-        public MongoDataGenerator(MongoDataRaw rawdata)
+        public MongoDataGenerator(MongoDataRaw rawData)
         {
-            this.RawData = rawdata;
+            this.RawData = rawData;
         }
 
         public MongoDataRaw RawData { get; private set; }
@@ -61,7 +61,7 @@
             var type = types.First(x => x.Name == typeName);
 
             return series
-                .Select(s => new Product(room, type, s, rnd.Next(30, 400), rnd.Next(3, 20), rnd.Next(20, 100)))
+                .Select(s => new Product(room, type, s, randomGenerator.Next(30, 400), randomGenerator.Next(3, 20), randomGenerator.Next(20, 100)))
                 .ToList();
         }
     }
