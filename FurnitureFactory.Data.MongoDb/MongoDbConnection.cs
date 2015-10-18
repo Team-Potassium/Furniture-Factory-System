@@ -8,26 +8,26 @@
     {
         private const string ConnectionStringLocal = "mongodb://127.0.0.1";
         private const string ConnectionString = @"mongodb://{0}:{1}@ds033754.mongolab.com:33754/furnitures";
-        private const string ENV_VAR_TEST = "Testing";
-        private const string ENV_VAR_PRODUCTION = "Production";
-        private readonly string[] ENV_VAR = { ENV_VAR_TEST, ENV_VAR_PRODUCTION };
+        private const string EnvVarTest = "Testing";
+        private const string EnvVarProduction = "Production";
+        private readonly string[] envVar = { EnvVarTest, EnvVarProduction };
 
         public MongoDatabase Database { get; internal set; }
 
         internal MongoClient Client { get; private set; }
 
-        public void Connect(string dbName, IUserInterfaceHandlerIO io)
+        public void Connect(string databaseName, IUserInterfaceHandlerIO io)
         {
             var env = this.ConfigEnvironment(io);
 
-            if (env == ENV_VAR_TEST)
+            if (env == EnvVarTest)
             {
                 // TODO: Extract connection string and server in something handling Environment
                 this.Client = new MongoClient(ConnectionStringLocal);
                 var server = this.Client.GetServer();
-                this.Database = server.GetDatabase(dbName);
+                this.Database = server.GetDatabase(databaseName);
             }
-            else if (env == ENV_VAR_PRODUCTION)
+            else if (env == EnvVarProduction)
             {
                 io.SetOutput("Username: ");
                 var username = io.GetInput().Trim();
@@ -35,10 +35,10 @@
                 Console.ForegroundColor = ConsoleColor.Black;
                 var password = io.GetInput().Trim();
                 Console.ForegroundColor = ConsoleColor.White;
-                this.Client = new MongoClient(string.Format(ConnectionString, username, password, dbName));
+                this.Client = new MongoClient(string.Format(ConnectionString, username, password, databaseName));
 
                 var server = this.Client.GetServer();
-                this.Database = server.GetDatabase(dbName);
+                this.Database = server.GetDatabase(databaseName);
             }
             else
             {
@@ -64,7 +64,7 @@
             io.SetOutput("[0] -> Testing");
             io.SetOutput("[1] -> Production");
             var env = int.Parse(io.GetInput());
-            return this.ENV_VAR[env];
+            return this.envVar[env];
         }
     }
 }

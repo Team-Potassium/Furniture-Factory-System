@@ -10,8 +10,6 @@
             : base("FurnitureFactoryConnection")
         {
             Database.SetInitializer(new MigrateDatabaseToLatestVersion<FurnitureFactoryDbContext, Configuration>());
-            // Just good to know: It's not possible to use DropCreate and migrations together. 
-           // Database.SetInitializer(new DropCreateDatabaseAlways<FurnitureFactoryDbContext>());
         }
 
         public virtual IDbSet<Product> Products { get; set; }

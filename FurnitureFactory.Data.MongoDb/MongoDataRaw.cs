@@ -4,7 +4,6 @@
 
     public class MongoDataRaw
     {
-      
             #region Series list
             private readonly List<string> series = new List<string>()
         {

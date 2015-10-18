@@ -1,12 +1,9 @@
 ﻿namespace FurnitureFactory.Data.MongoDb
 {
-    using System;
-    using Logic;
     using System.Data.Entity;
     using System.Data.Entity.Migrations;
     using System.Linq;
-    using MongoModels;
-    using Models;
+    using Logic;
     using MongoDB.Driver;
 
     public class MongoDbDataImporter : IImporter
@@ -20,18 +17,19 @@
             this.MongoDataManager = MongoDataManager.GetInstance(source);
         }
 
+        public DbContext Db { get; set; }
+
+        public MongoDataManager MongoDataManager { get; set; }
+
         public static MongoDbDataImporter GetInstance(DbContext db, MongoDatabase source)
         {
             if (instance == null)
             {
                 instance = new MongoDbDataImporter(db, source);
             }
+
             return instance;
         }
-
-        public DbContext Db { get; set; }
-
-        public MongoDataManager MongoDataManager { get; set; }
 
         public void ImportSeries()
         {
@@ -43,7 +41,7 @@
                 {
                     Name = series.Name
                 };
-                this.Db.Set<Models.Series>().AddOrUpdate(x=>x.Name,seriesEntity);
+                this.Db.Set<Models.Series>().AddOrUpdate(x => x.Name, seriesEntity);
             }
 
             this.Db.SaveChanges();
@@ -60,7 +58,7 @@
                     Name = room.Name
                 };
 
-                this.Db.Set<Models.Room>().AddOrUpdate(x=>x.Name,roomEntity);
+                this.Db.Set<Models.Room>().AddOrUpdate(x => x.Name, roomEntity);
             }
 
             this.Db.SaveChanges();
@@ -77,7 +75,7 @@
                     Name = type.Name
                 };
 
-                this.Db.Set<Models.FurnitureType>().AddOrUpdate(x=>x.Name,typeEntity);
+                this.Db.Set<Models.FurnitureType>().AddOrUpdate(x => x.Name, typeEntity);
             }
 
             this.Db.SaveChanges();
@@ -106,15 +104,15 @@
                     ProductionExpense = product.Price,
                     ProductionTime = product.ManufacturingLeadTime,
                     Weight = product.Weight,
-                    CatalogNumber = product.Series.Name.Substring(0,1) + this.nextFreeCatalogNumber
+                    CatalogNumber = product.Series.Name.Substring(0, 1) + this.nextFreeCatalogNumber
                 };
 
                 this.nextFreeCatalogNumber++;
 
-                this.Db.Set<Models.Product>().AddOrUpdate(x=>x.CatalogNumber,productEntity);
+                this.Db.Set<Models.Product>().AddOrUpdate(x => x.CatalogNumber, productEntity);
             }
+
             this.Db.SaveChanges();
         }
-
     }
 }

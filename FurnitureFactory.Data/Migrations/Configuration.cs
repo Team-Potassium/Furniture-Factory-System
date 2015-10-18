@@ -13,7 +13,6 @@
 
         protected override void Seed(FurnitureFactoryDbContext context)
         {
-           
         }
     }
 }
