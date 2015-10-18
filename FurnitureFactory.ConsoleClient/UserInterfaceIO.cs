@@ -3,7 +3,7 @@
     using System;
     using Logic;
 
-    public class UserInterfaceIO : UserInterfaceHandlerIO
+    public class UserInterfaceIO : IUserInterfaceHandlerIO
     {
         public string GetInput()
         {

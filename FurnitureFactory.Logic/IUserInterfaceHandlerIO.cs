@@ -1,6 +1,6 @@
 ﻿namespace FurnitureFactory.Logic
 {
-    public interface UserInterfaceHandlerIO
+    public interface IUserInterfaceHandlerIO
     {
         string GetInput();
 

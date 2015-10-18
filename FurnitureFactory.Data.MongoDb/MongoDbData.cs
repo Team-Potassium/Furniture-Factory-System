@@ -6,7 +6,7 @@
     // TODO: Singleton
     public class MongoDbData
     {
-        public MongoDbData(string dbName, UserInterfaceHandlerIO io)
+        public MongoDbData(string dbName, IUserInterfaceHandlerIO io)
         {
             this.Connection = new MongoDbConnection();
             this.Connection.Connect(dbName, io);
