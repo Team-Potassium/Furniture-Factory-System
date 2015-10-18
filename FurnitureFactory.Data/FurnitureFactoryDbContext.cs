@@ -12,13 +12,13 @@
             Database.SetInitializer(new MigrateDatabaseToLatestVersion<FurnitureFactoryDbContext, Configuration>());
         }
 
-        public virtual IDbSet<Product> Products { get; set; }
-
         public virtual IDbSet<Room> Rooms { get; set; }
 
         public virtual IDbSet<FurnitureType> FurnitureTypes { get; set; }
 
         public virtual IDbSet<Series> Series { get; set; }
+
+        public virtual IDbSet<Product> Products { get; set; }
 
         public virtual IDbSet<Material> Materials { get; set; }
 
