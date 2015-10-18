@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.23107.0
+# Visual Studio 2013
+VisualStudioVersion = 12.0.21005.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FurnitureFactory.Data", "FurnitureFactory.Data\FurnitureFactory.Data.csproj", "{AE84BF50-DAEB-49C6-B4DE-F09FA8B15FEE}"
 EndProject
@@ -14,6 +14,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FurnitureFactory.Data.MongoDb", "FurnitureFactory.Data.MongoDb\FurnitureFactory.Data.MongoDb.csproj", "{5E8E282D-269D-4AEE-B9EB-CAD7A4EBE2D7}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FurnitureFactory.Logic", "FurnitureFactory.Logic\FurnitureFactory.Logic.csproj", "{6EA4789A-B012-4146-9687-03C40430D6D2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FurnitureFactory.Data.Export", "FurnitureFactory.Data.Export\FurnitureFactory.Data.Export.csproj", "{D2101016-AD1F-40AC-BB6C-7840E21129A3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -45,6 +47,10 @@ Global
 		{6EA4789A-B012-4146-9687-03C40430D6D2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6EA4789A-B012-4146-9687-03C40430D6D2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6EA4789A-B012-4146-9687-03C40430D6D2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D2101016-AD1F-40AC-BB6C-7840E21129A3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D2101016-AD1F-40AC-BB6C-7840E21129A3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D2101016-AD1F-40AC-BB6C-7840E21129A3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D2101016-AD1F-40AC-BB6C-7840E21129A3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -3,6 +3,7 @@
     using System.Linq;
     using Data.MongoDb;
     using FurnitureFactory.Data;
+    using FurnitureFactory.Logic.Exporters;
 
     public class StartUp
     {
@@ -11,6 +12,10 @@
         public static void Main()
         {
             var context = new FurnitureFactoryDbContext();
+
+            PdfExporter pdfExporter= new PdfExporter(context);
+            pdfExporter.GeneratePdf();
+
             context.Database.Delete();
             context.Database.Create();
             context.SaveChanges();
