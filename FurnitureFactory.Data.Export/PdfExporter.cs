@@ -33,6 +33,13 @@
             document.Close();
         }
 
+        public PdfPCell CreateHeaderCell(string content)
+        {
+            PdfPCell cell = new PdfPCell(new Phrase(content));
+            cell.BackgroundColor = BaseColor.GRAY;
+            return cell;
+        }
+
         private PdfPTable CreateShopReportsTable()
         {
             PdfPTable table = new PdfPTable(2);
@@ -44,13 +51,6 @@
             table.SpacingBefore = 20f;
             table.SpacingAfter = 30f;
             return table;
-        }
-
-        public PdfPCell CreateHeaderCell(string content)
-        {
-            PdfPCell cell = new PdfPCell(new Phrase(content));
-            cell.BackgroundColor = BaseColor.GRAY;
-            return cell;
         }
     }
 }

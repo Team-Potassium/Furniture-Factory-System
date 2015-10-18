@@ -84,6 +84,10 @@
       <Project>{d2101016-ad1f-40ac-bb6c-7840e21129a3}</Project>
       <Name>FurnitureFactory.Data.Export</Name>
     </ProjectReference>
+    <ProjectReference Include="..\FurnitureFactory.Data.Json\FurnitureFactory.Data.Json.csproj">
+      <Project>{386e8cc5-c0b2-4e6e-bee5-d6e5bd046964}</Project>
+      <Name>FurnitureFactory.Data.Json</Name>
+    </ProjectReference>
     <ProjectReference Include="..\FurnitureFactory.Data.MongoDb\FurnitureFactory.Data.MongoDb.csproj">
       <Project>{5e8e282d-269d-4aee-b9eb-cad7a4ebe2d7}</Project>
       <Name>FurnitureFactory.Data.MongoDb</Name>
