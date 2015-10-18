@@ -1,5 +1,6 @@
 ﻿namespace FurnitureFactory.ConsoleClient
 {
+    using System.Linq;
     using Data.MongoDb;
     using FurnitureFactory.Data;
 
@@ -17,6 +18,7 @@
             ConsoleUserInterfaceIO io = new ConsoleUserInterfaceIO();
             var mongodata = new MongoDbData(DatabaseName, io);
             mongodata.Import(context);
+            io.SetOutput(context.Products.Count());
         }
     }
 }

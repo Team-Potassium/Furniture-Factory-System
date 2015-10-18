@@ -1,6 +1,7 @@
 ﻿namespace FurnitureFactory.Data.MongoDb
 {
     using System.Data.Entity;
+    using System.Data.Entity.Migrations;
     using System.Linq;
     using Logic;
     using MongoDB.Driver;
@@ -40,7 +41,7 @@
                 {
                     Name = series.Name
                 };
-                this.Db.Set<Models.Series>().Add(seriesEntity);
+                this.Db.Set<Models.Series>().AddOrUpdate(x => x.Name, seriesEntity);
             }
 
             this.Db.SaveChanges();
@@ -57,7 +58,7 @@
                     Name = room.Name
                 };
 
-                this.Db.Set<Models.Room>().Add(roomEntity);
+                this.Db.Set<Models.Room>().AddOrUpdate(x => x.Name, roomEntity);
             }
 
             this.Db.SaveChanges();
@@ -74,7 +75,7 @@
                     Name = type.Name
                 };
 
-                this.Db.Set<Models.FurnitureType>().Add(typeEntity);
+                this.Db.Set<Models.FurnitureType>().AddOrUpdate(x => x.Name, typeEntity);
             }
 
             this.Db.SaveChanges();
@@ -108,7 +109,7 @@
 
                 this.nextFreeCatalogNumber++;
 
-                this.Db.Set<Models.Product>().Add(productEntity);
+                this.Db.Set<Models.Product>().AddOrUpdate(x => x.CatalogNumber, productEntity);
             }
 
             this.Db.SaveChanges();
