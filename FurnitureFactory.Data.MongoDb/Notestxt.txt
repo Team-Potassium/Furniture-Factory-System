@@ -1,0 +1,2 @@
+﻿//var query = Query.And(
+//    Query<MongoModels.Series>.Where(x => x.Name.Contains("GAN")));
