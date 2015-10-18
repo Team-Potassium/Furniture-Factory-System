@@ -1,11 +1,8 @@
 ﻿namespace FurnitureFactory.Data.MongoDb
 {
-    using System;
-    using Logic;
     using System.Data.Entity;
     using System.Linq;
-    using MongoModels;
-    using Models;
+    using Logic;
     using MongoDB.Driver;
 
     public class MongoDbDataImporter : IImporter
@@ -18,6 +15,10 @@
             this.Db = db;
             this.MongoDataManager = MongoDataManager.GetInstance(source);
         }
+        
+        public DbContext Db { get; set; }
+
+        public MongoDataManager MongoDataManager { get; set; }
 
         public static MongoDbDataImporter GetInstance(DbContext db, MongoDatabase source)
         {
@@ -25,12 +26,9 @@
             {
                 instance = new MongoDbDataImporter(db, source);
             }
+
             return instance;
         }
-
-        public DbContext Db { get; set; }
-
-        public MongoDataManager MongoDataManager { get; set; }
 
         public void ImportSeries()
         {
@@ -105,15 +103,15 @@
                     ProductionExpense = product.Price,
                     ProductionTime = product.ManufacturingLeadTime,
                     Weight = product.Weight,
-                    CatalogNumber = product.Series.Name.Substring(0,1) + this.nextFreeCatalogNumber
+                    CatalogNumber = product.Series.Name.Substring(0, 1) + this.nextFreeCatalogNumber
                 };
 
                 this.nextFreeCatalogNumber++;
 
                 this.Db.Set<Models.Product>().Add(productEntity);
             }
+
             this.Db.SaveChanges();
         }
-
     }
 }

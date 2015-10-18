@@ -6,12 +6,12 @@
     // TODO: Singleton
     public class MongoDbData
     {
-        public MongoDbData(string dbName, IUserInterfaceHandlerIO io)
+        public MongoDbData(string databaseName, IUserInterfaceHandlerIO io)
         {
             this.Connection = new MongoDbConnection();
-            this.Connection.Connect(dbName, io);
+            this.Connection.Connect(databaseName, io);
             this.Connection.Drop(io);
-            this.Seeder = new MongoDataSeeder(dbName, this.Connection.Database, io);
+            this.Seeder = new MongoDataSeeder(databaseName, this.Connection.Database, io);
             this.Seeder.Seed();
         }
 

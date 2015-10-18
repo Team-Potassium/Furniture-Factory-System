@@ -8,7 +8,7 @@
 
     public class MongoDataSeeder
     {
-        public MongoDataSeeder(string dbName,MongoDatabase database, IUserInterfaceHandlerIO io)
+        public MongoDataSeeder(string databaseName, MongoDatabase database, IUserInterfaceHandlerIO io)
         {
             this.DataSource = new MongoDataRaw();
             this.DataGenerator = new MongoDataGenerator(this.DataSource);
@@ -20,7 +20,7 @@
 
         public MongoDataGenerator DataGenerator { get; set; }
 
-        public IDictionary<string,IEnumerable<IMongoModel>> Collections { get; set; }
+        public IDictionary<string, IEnumerable<IMongoModel>> Collections { get; set; }
 
         public MongoDataManager DataManager { get; set; }
 
@@ -37,7 +37,7 @@
             List<Series> series = this.DataGenerator.GetSeries();
             List<Product> products = this.DataGenerator.GetAllProducts(rooms, types, series);
 
-           this.Collections.Add(new KeyValuePair<string, IEnumerable<IMongoModel>>("rooms",rooms));
+            this.Collections.Add(new KeyValuePair<string, IEnumerable<IMongoModel>>("rooms", rooms));
             this.Collections.Add(new KeyValuePair<string, IEnumerable<IMongoModel>>("types", types));
             this.Collections.Add(new KeyValuePair<string, IEnumerable<IMongoModel>>("series", series));
             this.Collections.Add(new KeyValuePair<string, IEnumerable<IMongoModel>>("products", products));

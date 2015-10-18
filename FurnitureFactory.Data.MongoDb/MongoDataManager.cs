@@ -13,18 +13,19 @@
             this.Database = database;
         }
 
+        public MongoDatabase Database { get; set; }
+
         public static MongoDataManager GetInstance(MongoDatabase database)
         {
             if (instance == null)
             {
                 instance = new MongoDataManager(database);
             }
+
             return instance;
         }
 
-        public MongoDatabase Database { get; set; }
-
-        public void SeedCollection<T>( string collectionName, IEnumerable<T> collectionItems)
+        public void SeedCollection<T>(string collectionName, IEnumerable<T> collectionItems)
         {
             MongoCollection<T> collection = this.Database.GetCollection<T>(collectionName);
             collection.InsertBatch(collectionItems);
@@ -32,15 +33,15 @@
 
         public MongoCollection<T> GetCollection<T>(string collectionName)
         {
-           return  this.Database.GetCollection<T>(collectionName);
+            return this.Database.GetCollection<T>(collectionName);
         }
 
-        public IList<T> GetCollectionAsList<T>( string collectionName)
+        public IList<T> GetCollectionAsList<T>(string collectionName)
         {
-           return this.Database
-                .GetCollection<T>(collectionName)
-                .FindAllAs<T>()
-                .ToList();
+            return this.Database
+                 .GetCollection<T>(collectionName)
+                 .FindAllAs<T>()
+                 .ToList();
         }
     }
 }
