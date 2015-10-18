@@ -4,11 +4,11 @@
     {
         public int Id { get; set; }
 
-        public int FurnitureTypeId { get; set; }
+        public int? FurnitureTypeId { get; set; }
 
-        public int RoomId { get; set; }
+        public int? RoomId { get; set; }
 
-        public int SeriesId { get; set; }
+        public int? SeriesId { get; set; }
 
         public decimal ProductionExpense { get; set; }
 
