@@ -47,7 +47,7 @@
         {
             io.SetOutput("Drop database?");
             io.SetOutput("[Y]es / [N]o     :");
-            var input = io.GetInput();
+            var input = io.GetInput().Trim().ToUpper();
 
             if (input == "Y")
             {
