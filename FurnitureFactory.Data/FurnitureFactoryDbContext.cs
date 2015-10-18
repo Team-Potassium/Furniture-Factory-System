@@ -2,14 +2,16 @@
 {
     using System.Data.Entity;
     using FurnitureFactory.Models;
+    using Migrations;
 
     public class FurnitureFactoryDbContext : DbContext
     {
         public FurnitureFactoryDbContext()
             : base("FurnitureFactoryConnection")
         {
+            Database.SetInitializer(new MigrateDatabaseToLatestVersion<FurnitureFactoryDbContext, Configuration>());
             // Just good to know: It's not possible to use DropCreate and migrations together. 
-            Database.SetInitializer(new DropCreateDatabaseAlways<FurnitureFactoryDbContext>());
+           // Database.SetInitializer(new DropCreateDatabaseAlways<FurnitureFactoryDbContext>());
         }
 
         public virtual IDbSet<Product> Products { get; set; }
@@ -27,5 +29,23 @@
         public virtual IDbSet<Order> Orders { get; set; }
 
         public virtual IDbSet<ProductsMaterialsQuantity> ProductsMaterialsQuantities { get; set; }
+
+        protected override void OnModelCreating(DbModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<Product>()
+                .HasOptional(x => x.FurnitureType)
+                .WithMany()
+                .WillCascadeOnDelete(false);
+
+            modelBuilder.Entity<Product>()
+               .HasOptional(x => x.Series)
+               .WithMany()
+               .WillCascadeOnDelete(false);
+
+             modelBuilder.Entity<Product>()
+                .HasOptional(x => x.Room)
+                .WithMany()
+                .WillCascadeOnDelete(false);
+        }
     }
 }
