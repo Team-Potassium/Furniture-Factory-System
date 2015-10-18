@@ -51,7 +51,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="IImporter.cs" />
-    <Compile Include="UserInterfaceHandlerIO.cs" />
+    <Compile Include="IUserInterfaceHandlerIO.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

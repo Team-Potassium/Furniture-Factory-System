@@ -16,7 +16,7 @@
 
         internal MongoClient Client { get; private set; }
 
-        public void Connect(string dbName, UserInterfaceHandlerIO io)
+        public void Connect(string dbName, IUserInterfaceHandlerIO io)
         {
             var env = this.ConfigEnvironment(io);
 
@@ -46,7 +46,7 @@
             }
         }
 
-        public void Drop(UserInterfaceHandlerIO io)
+        public void Drop(IUserInterfaceHandlerIO io)
         {
             io.SetOutput("Drop database?");
             io.SetOutput("[Y]es / [N]o     :");
@@ -58,7 +58,7 @@
             }
         }
 
-        private string ConfigEnvironment(UserInterfaceHandlerIO io)
+        private string ConfigEnvironment(IUserInterfaceHandlerIO io)
         {
             io.SetOutput("ENVIRONMENT: ");
             io.SetOutput("[0] -> Testing");

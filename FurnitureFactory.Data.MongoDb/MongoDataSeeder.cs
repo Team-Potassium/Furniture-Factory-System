@@ -8,7 +8,7 @@
 
     public class MongoDataSeeder
     {
-        public MongoDataSeeder(string dbName,MongoDatabase database, UserInterfaceHandlerIO io)
+        public MongoDataSeeder(string dbName,MongoDatabase database, IUserInterfaceHandlerIO io)
         {
             this.DataSource = new MongoDataRaw();
             this.DataGenerator = new MongoDataGenerator(this.DataSource);

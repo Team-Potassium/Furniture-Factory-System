@@ -1,5 +1,6 @@
 ﻿namespace FurnitureFactory.ConsoleClient
 {
+    using System.Linq;
     using Data.MongoDb;
     using FurnitureFactory.Data;
 
@@ -7,7 +8,7 @@
     {
         public static void Main()
         {
-             var db = new FurnitureFactoryDbContext();
+            var db = new FurnitureFactoryDbContext();
             var DatabaseName = "furnitures";
 
             db.Database.Delete();
@@ -17,6 +18,8 @@
             var io = new UserInterfaceIO();
             var mongodata = new MongoDbData(DatabaseName, io);
             mongodata.Import(db);
+
+            io.SetOutput(db.Products.Count());
         }
     }
 }
