@@ -3,10 +3,10 @@
     public class Product
     {
         public int Id { get; set; }
-        
+
         public decimal ProductionExpense { get; set; }
 
-       // TODO: Change to appropriate type if have time
+        // TODO: Change to appropriate type if have time
         public int ProductionTime { get; set; }
 
         public double Weight { get; set; }

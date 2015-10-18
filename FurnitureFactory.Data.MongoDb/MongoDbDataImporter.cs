@@ -15,7 +15,7 @@
             this.Db = db;
             this.MongoDataManager = MongoDataManager.GetInstance(source);
         }
-        
+
         public DbContext Db { get; set; }
 
         public MongoDataManager MongoDataManager { get; set; }

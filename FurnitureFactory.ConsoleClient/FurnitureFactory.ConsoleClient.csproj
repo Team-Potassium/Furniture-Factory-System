@@ -63,7 +63,7 @@
   <ItemGroup>
     <Compile Include="StartUp.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="UserInterfaceIO.cs" />
+    <Compile Include="ConsoleUserInterfaceIO.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

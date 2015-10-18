@@ -6,7 +6,7 @@
 
     public class MongoDbConnection
     {
-        private const string ConnectionStringLocal = "mongodb://127.0.0.1";
+        private const string ConnectionStringLocal = "mongodb://localhost:27017/furniture";
         private const string ConnectionString = @"mongodb://{0}:{1}@ds033754.mongolab.com:33754/furnitures";
         private const string EnvVarTest = "Testing";
         private const string EnvVarProduction = "Production";
@@ -32,11 +32,8 @@
                 io.SetOutput("Username: ");
                 var username = io.GetInput().Trim();
                 io.SetOutput("Password: ");
-                Console.ForegroundColor = ConsoleColor.Black;
-                var password = io.GetInput().Trim();
-                Console.ForegroundColor = ConsoleColor.White;
+                var password = io.GetPassword().Trim();
                 this.Client = new MongoClient(string.Format(ConnectionString, username, password, databaseName));
-
                 var server = this.Client.GetServer();
                 this.Database = server.GetDatabase(databaseName);
             }
@@ -63,8 +60,8 @@
             io.SetOutput("ENVIRONMENT: ");
             io.SetOutput("[0] -> Testing");
             io.SetOutput("[1] -> Production");
-            var env = int.Parse(io.GetInput());
-            return this.envVar[env];
+            var environment = int.Parse(io.GetInput());
+            return this.envVar[environment];
         }
     }
 }
