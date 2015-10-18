@@ -5,6 +5,7 @@
     using Data.MongoDb;
     using FurnitureFactory.Data;
     using FurnitureFactory.Data.MySql;
+    using FurnitureFactory.Logic.Exporters;
 
     public class StartUp
     {
@@ -16,22 +17,22 @@
 
             var db = new FurnitureFactoryDbContext();
 
-            var databaseName = "furnitures";
-
-            db.Database.Delete();
-            db.Database.Create();
-            db.SaveChanges();
+            ////db.Database.Delete();
+            ////db.Database.Create();
 
             ConsoleUserInterfaceIO io = new ConsoleUserInterfaceIO();
-            var mongodata = new MongoDbData(databaseName, io);
+            var mongodata = new MongoDbData(DatabaseName, io);
             mongodata.Import(db);
+
+            PdfExporter pdfExporter = new PdfExporter(db);
+            pdfExporter.GeneratePdf();
 
             var furnituresForBedroom = db.Products
                 .Where(x => x.RoomId == 1)
                 .Select(x => x.Series.Name)
                 .ToList();
 
-            // Output must be: ALVIS \n  396    Tests, huh? :D
+            //// Output must be: ALVIS \n  396    Tests, huh? :D
             io.SetOutput(furnituresForBedroom.First());
             io.SetOutput(db.Products.Count());
         }
