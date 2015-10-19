@@ -1,11 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace FileSystemUtils
+﻿namespace FileSystemUtils
 {
+    using System;
+    using System.Collections.Generic;
+
     /// <summary>
     /// Interface describing classes that load data to DbContext.
     /// </summary>

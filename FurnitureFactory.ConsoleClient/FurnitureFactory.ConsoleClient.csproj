@@ -100,6 +100,10 @@
       <Project>{f9c06877-e9ab-43b8-b126-e3efaf869e70}</Project>
       <Name>FurnitureFactory.Data.MySql</Name>
     </ProjectReference>
+    <ProjectReference Include="..\FurnitureFactory.Data.Xml\FurnitureFactory.Data.Xml.csproj">
+      <Project>{36d707ed-3655-4e86-9d8b-b0cfaab57e8c}</Project>
+      <Name>FurnitureFactory.Data.Xml</Name>
+    </ProjectReference>
     <ProjectReference Include="..\FurnitureFactory.Data\FurnitureFactory.Data.csproj">
       <Project>{ae84bf50-daeb-49c6-b4de-f09fa8b15fee}</Project>
       <Name>FurnitureFactory.Data</Name>

@@ -7,9 +7,10 @@
     using FurnitureFactory.Data;
     using FurnitureFactory.Logic.DataLoaders;
     using FurnitureFactory.Data.Json;
+    using FurnitureFactory.Data.Xml.Exporters;
     using FurnitureFactory.Data.MySql;
     using FurnitureFactory.Logic.Exporters;
-
+    
     public class StartUp
     {
         private const string DatabaseName = "furnitures";
@@ -42,6 +43,11 @@
 
             var jsonReporter = new JsonProductsReporter(db);
             jsonReporter.GetJsonReport().Load();
+
+            // Generate Xml Report in Xml-Exports folder
+            var xml = new XmlFileExporter(db);
+            xml.GetXmlReportForOrders();
+            xml.GetXmlReportForProducts();
 
             // Load excel from zip - Task1
             LoadSalesReports();

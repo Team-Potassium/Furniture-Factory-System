@@ -36,7 +36,6 @@
                 {
                     foreach (var dataLoader in this.dataLoaders)
                     {
-
                         while (reader.Read())
                         {
                             IList<Object> currentRowFields = new List<Object>();
