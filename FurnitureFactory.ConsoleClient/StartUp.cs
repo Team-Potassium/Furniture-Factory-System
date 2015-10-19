@@ -3,7 +3,9 @@
     using System.Linq;
     using System.Runtime.CompilerServices;
     using Data.MongoDb;
+    using FileSystemUtils.FileLoaders;
     using FurnitureFactory.Data;
+    using FurnitureFactory.Logic.DataLoaders;
     using FurnitureFactory.Data.Json;
     using FurnitureFactory.Data.MySql;
     using FurnitureFactory.Logic.Exporters;
@@ -41,6 +43,23 @@
             var jsonReporter = new JsonProductsReporter(db);
             jsonReporter.GetJsonReport().Load();
 
+            // Load excel from zip - Task1
+            LoadSalesReports();
+        }
+
+        private static void LoadSalesReports()
+        {
+            string sourceArchiveFilePath = @"..\..\..\Sales-Reports.zip";
+
+            var salesReportLoader = new SalesReportsDataLoader();
+
+            var excelFileLoader = new ExcelFileLoader();
+            excelFileLoader.AddDataLoader(salesReportLoader);
+
+            var zipArchiveLoader = new ZipArchiveLoader();
+            zipArchiveLoader.AddFileLoader(excelFileLoader);
+
+            zipArchiveLoader.Load(sourceArchiveFilePath);
         }
     }
 }
