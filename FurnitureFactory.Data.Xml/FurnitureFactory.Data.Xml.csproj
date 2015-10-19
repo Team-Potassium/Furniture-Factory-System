@@ -41,7 +41,6 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
-    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -54,8 +53,6 @@
     <Compile Include="Exporters\OrdersXmlFileExporter.cs" />
     <Compile Include="Exporters\ProductsXmlFileExporter.cs" />
     <Compile Include="Exporters\XmlFileExporter.cs" />
-    <Compile Include="Importers\ProductsXmlFileImporter.cs" />
-    <Compile Include="Importers\XmlFileImporter.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -71,10 +68,6 @@
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Importers\Stored Procedure.txt" />
-    <Content Include="Importers\Xml-Data.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
