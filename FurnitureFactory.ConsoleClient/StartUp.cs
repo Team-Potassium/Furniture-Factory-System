@@ -6,6 +6,7 @@
     using FurnitureFactory.Data.Json;
     using FurnitureFactory.Data.Xml.Exporters;
     using FurnitureFactory.Logic.DataImporters;
+    using FurnitureFactory.Logic.Exporters;
 
     public class StartUp
     {
