@@ -16,8 +16,6 @@
 
         public static void Main()
         {
-             var mySqlDb = new SalesDbContext();
-
             var db = new FurnitureFactoryDbContext();
             ConsoleUserInterfaceIO io = new ConsoleUserInterfaceIO();
 

@@ -11,7 +11,7 @@ namespace FurnitureFactory.Data.MySql
 
     public partial class SalesDbContext : OpenAccessContext
     {
-        private static string connectionStringName = @"connectionId";
+        private static string connectionStringName = @"SalesConnection";
 
         private static BackendConfiguration backend =
             GetBackendConfiguration();
@@ -19,10 +19,11 @@ namespace FurnitureFactory.Data.MySql
         private static MetadataSource metadataSource =
             new SalesModelConfiguration();
 
-        public SalesDbContext()
+        public SalesDbContext(string connectionStringName)
             : base(connectionStringName, backend, metadataSource)
         { }
 
+      
         public IQueryable<SalesTotalCostReport> Sales
         {
             get

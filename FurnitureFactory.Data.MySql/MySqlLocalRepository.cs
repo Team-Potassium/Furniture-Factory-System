@@ -14,12 +14,7 @@
             this.context = context;
         }
 
-        public MySqlLocalRepository()
-            : this(new SalesDbContext())
-        {
-        }
-
-        public void Add(SalesTotalCostReport entity)
+      public void Add(SalesTotalCostReport entity)
         {
             this.context.Add(entity);
         }
