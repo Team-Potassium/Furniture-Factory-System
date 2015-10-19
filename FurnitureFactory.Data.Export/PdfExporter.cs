@@ -1,4 +1,4 @@
-﻿namespace FurnitureFactory.Logic.Exporters
+namespace FurnitureFactory.Logic.Exporters
 {
     using System.Data.Entity;
     using System.IO;

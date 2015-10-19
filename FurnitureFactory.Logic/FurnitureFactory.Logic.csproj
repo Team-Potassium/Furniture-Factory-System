@@ -50,7 +50,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DataLoaders\ReportsDataLoader.cs" />
+    <Compile Include="DataImporters\SalesReportsImporter.cs" />
     <Compile Include="IImporter.cs" />
     <Compile Include="IUserInterfaceHandlerIO.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
