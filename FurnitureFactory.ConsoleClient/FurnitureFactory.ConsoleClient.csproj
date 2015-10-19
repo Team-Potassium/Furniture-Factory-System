@@ -80,6 +80,10 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\FileSystemUtils\FileSystemUtils.csproj">
+      <Project>{1c2d56cf-be75-40b3-88ae-ab13ddbd3f67}</Project>
+      <Name>FileSystemUtils</Name>
+    </ProjectReference>
     <ProjectReference Include="..\FurnitureFactory.Data.Export\FurnitureFactory.Data.Export.csproj">
       <Project>{d2101016-ad1f-40ac-bb6c-7840e21129a3}</Project>
       <Name>FurnitureFactory.Data.Export</Name>
