@@ -1,0 +1,18 @@
+﻿CREATE PROCEDURE [dbo].[InsertXML]
+@xml XML
+AS
+BEGIN
+      SET NOCOUNT ON;
+ 
+      INSERT INTO Products
+      SELECT
+      Product.value('@Id','INT') AS Id, --ATTRIBUTE
+      Product.value('(room/text())[1]','VARCHAR(100)') AS Room, --TAG
+      Product.value('(furnitureType/text())[1]','VARCHAR(100)') AS FurnitureType --TAG
+	  Product.value('(series/text())[1]','VARCHAR(100)') AS Series --TAG
+	  Product.value('(price/text())[1]','MONEY') AS Price --TAG
+	  Product.value('(manufacturingLeadTime/text())[1]','VARCHAR(100)') AS ManufacturingLeadTime --TAG
+	  Product.value('(weight/text())[1]','FLOAT') AS Weight --TAG
+      FROM
+      @xml.nodes('/Products/Product')AS TEMPTABLE(Product)
+END
