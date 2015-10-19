@@ -17,12 +17,12 @@
         {
         }
 
-        public void Import(IEnumerable<Client> entities)
+        public void Import(IEnumerable<SalesTotalCostReport> entities)
         {
             this.repository.AddRange(entities);
         }
 
-        public IEnumerable<Client> Export()
+        public IEnumerable<SalesTotalCostReport> Export()
         {
             return this.repository.GetEntities();
         }

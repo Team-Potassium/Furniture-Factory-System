@@ -5,15 +5,39 @@ namespace FurnitureFactory.Data.MySql
     using System.Linq;
     using FurnitureFactory.Models;
     using global::MySql.Data.Entity;
+    using Models;
+    using Telerik.OpenAccess;
+    using Telerik.OpenAccess.Metadata;
 
-    [DbConfigurationType(typeof(MySqlEFConfiguration))]
-    public class SalesDbContext : DbContext
+    public partial class SalesDbContext : OpenAccessContext
     {
+        private static string connectionStringName = @"connectionId";
+
+        private static BackendConfiguration backend =
+            GetBackendConfiguration();
+
+        private static MetadataSource metadataSource =
+            new SalesModelConfiguration();
+
         public SalesDbContext()
-            : base("SalesConnection")
+            : base(connectionStringName, backend, metadataSource)
+        { }
+
+        public IQueryable<SalesTotalCostReport> Sales
         {
+            get
+            {
+                return this.GetAll<SalesTotalCostReport>();
+            }
         }
 
-        public virtual DbSet<Client> Clients { get; set; }
+        public static BackendConfiguration GetBackendConfiguration()
+        {
+            BackendConfiguration backend = new BackendConfiguration();
+            backend.Backend = "MsSql";
+            backend.ProviderName = "System.Data.SqlClient";
+
+            return backend;
+        }
     }
 }

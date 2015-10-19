@@ -5,7 +5,7 @@
     using System.Linq;
     using Models;
 
-    public class MySqlLocalRepository 
+    public class MySqlLocalRepository
     {
         private SalesDbContext context;
 
@@ -19,15 +19,14 @@
         {
         }
 
-        public void Add<T>(T entity)
-            where T : class
+        public void Add(SalesTotalCostReport entity)
         {
-            this.context.Set<Client>().Add(entity as Client);
+            this.context.Add(entity);
         }
 
-        public void AddRange<T>(IEnumerable<T> collection)
+        public void AddRange(IEnumerable<SalesTotalCostReport> collection)
         {
-            this.context.Set<Client>().AddRange(collection as IQueryable<Client>);
+            this.context.Add(collection);
         }
 
         // Because why not 
@@ -36,14 +35,14 @@
         //    return (dynamic)this.context.Set<Series>();
         //}
 
-        public IQueryable<Client> GetEntities()
+        public IQueryable<SalesTotalCostReport> GetEntities()
         {
-            return this.context.Set<Client>();
-        } 
+            return this.context.Sales;
+        }
 
         public void DeleteAll()
         {
-            throw new NotImplementedException();
+            this.context.Delete(this.context.Sales);
         }
 
         public void SaveChanges()

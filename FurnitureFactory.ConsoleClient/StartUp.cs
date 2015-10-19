@@ -7,6 +7,8 @@
     using FurnitureFactory.Data.Xml.Exporters;
     using FurnitureFactory.Logic.DataImporters;
     using FurnitureFactory.Logic.Exporters;
+    using Data.MongoDb;
+    using Data.MySql;
 
     public class StartUp
     {
@@ -14,19 +16,19 @@
 
         public static void Main()
         {
-            //// var db = new SalesDbContext();
+             var mySqlDb = new SalesDbContext();
 
             var db = new FurnitureFactoryDbContext();
             ConsoleUserInterfaceIO io = new ConsoleUserInterfaceIO();
 
-            //db.Database.Delete();
-            //db.Database.Create();
+            db.Database.Delete();
+            db.Database.Create();
 
-            //var mongodata = new MongoDbData(DatabaseName, io);
-            //mongodata.Import(db);
+            var mongodata = new MongoDbData(DatabaseName, io);
+            mongodata.Import(db);
 
-            PdfExporter pdfExporter = new PdfExporter(db);
-            pdfExporter.GeneratePdf();
+            //PdfExporter pdfExporter = new PdfExporter(db);
+            //pdfExporter.GeneratePdf();
 
             var furnituresForBedroom = db.Products
                 .Where(x => x.RoomId == 1)
@@ -50,7 +52,7 @@
 
 
             // Load excel from zip - Task1
-            LoadSalesReports();
+           // LoadSalesReports();
         }
 
         private static void LoadSalesReports()
