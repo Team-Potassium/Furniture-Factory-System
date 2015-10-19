@@ -18,6 +18,7 @@
 
         public string GetPassword()
         {
+            this.SetOutput("Enter password:");
             StringBuilder builder = new StringBuilder();
             ConsoleKeyInfo symbol = Console.ReadKey(true);
             while (symbol.Key != ConsoleKey.Enter)
@@ -43,7 +44,7 @@
             }
 
             Console.WriteLine();
-            return builder.ToString();
+            return builder.ToString().Trim();
         }
     }
 }

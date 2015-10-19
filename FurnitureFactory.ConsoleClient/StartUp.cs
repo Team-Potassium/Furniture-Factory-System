@@ -9,6 +9,7 @@
     using FurnitureFactory.Logic.Exporters;
     using Data.MongoDb;
     using Data.MySql;
+    using Logic;
 
     public class StartUp
     {
@@ -19,11 +20,11 @@
             var db = new FurnitureFactoryDbContext();
             ConsoleUserInterfaceIO io = new ConsoleUserInterfaceIO();
 
-            db.Database.Delete();
-            db.Database.Create();
+            //db.Database.Delete();
+            //db.Database.Create();
 
-            var mongodata = new MongoDbData(DatabaseName, io);
-            mongodata.Import(db);
+            //var mongodata = new MongoDbData(DatabaseName, io);
+            //mongodata.Import(db);
 
             //PdfExporter pdfExporter = new PdfExporter(db);
             //pdfExporter.GeneratePdf();
@@ -33,15 +34,20 @@
                 .Select(x => x.Series.Name)
                 .ToList();
 
-            //// Output must be: ALVIS \n  396    Tests, huh? :D
+            // Output must be: ALVIS \n  396    Tests, huh? :D
 
             io.SetOutput(furnituresForBedroom.FirstOrDefault());
             io.SetOutput(db.Products.Count());
 
+            // task 4.1
             var jsonReporter = new JsonProductsReporter(db);
             jsonReporter.GetJsonReport().Load();
 
-            // Generate Xml Report in Xml-Exports folder
+            // task 4.2
+            //var mySqlImporter = new SalesReportsMySqlImporter(io);
+            //mySqlImporter.Save();
+
+            //// Generate Xml Report in Xml-Exports folder
             var productXmlReport = new ProductsXmlFileExporter(db);
             productXmlReport.GetXmlReport();
 
@@ -50,7 +56,7 @@
 
 
             // Load excel from zip - Task1
-           // LoadSalesReports();
+            // LoadSalesReports();
         }
 
         private static void LoadSalesReports()

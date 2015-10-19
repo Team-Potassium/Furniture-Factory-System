@@ -31,7 +31,6 @@
             {
                 io.SetOutput("Username: ");
                 var username = io.GetInput().Trim();
-                io.SetOutput("Password: ");
                 var password = io.GetPassword().Trim();
                 this.Client = new MongoClient(string.Format(ConnectionString, username, password, databaseName));
                 var server = this.Client.GetServer();

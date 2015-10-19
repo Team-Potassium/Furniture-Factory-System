@@ -3,8 +3,8 @@
     using System;
     using System.IO;
     using System.Linq;
-
     using FurnitureFactory.Data;
+    using MySql.Models;
     using Newtonsoft.Json;
 
     public class JsonProductsReporter
@@ -46,29 +46,17 @@
 
         public JsonProductsReporter GetJsonReport()
         {
-            var products = this.db.Products
-               .Select(pr =>
-               new
-               {
-                   pr.Id,
-                   pr.ProductionExpense,
-                   pr.ProductionTime,
-                   pr.Weight,
-                   pr.CatalogNumber,
-                   FurnitureType = pr.FurnitureType.Name,
-                   Room = pr.Room.Name,
-                   Series = pr.Series.Name
-               }).ToList();
+            var reports = db.Clients
+                .Select(x => new SalesTotalCostReport
+                {
+                    Name = x.Name,
+                    TotalCost = db.Orders.Where(o => o.Client.Id == x.Id).Select(price => price.Price).Sum(t => t)
+                })
+                .ToList();
 
-            if (products.Any())
-            {
-                products.ForEach(x => this.localRepository.AddReport(x.CatalogNumber, x));
-            }
-            else
-            {
-                Console.WriteLine(NoProductsFound);
-            }
-
+            reports.ForEach(x => this.localRepository.AddReport(
+                    x.Name,
+                    JsonConvert.SerializeObject(x, Formatting.Indented)));
             return this;
         }
     }

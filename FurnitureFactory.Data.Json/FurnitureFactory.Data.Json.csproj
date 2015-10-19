@@ -69,6 +69,10 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\FurnitureFactory.Data.MySql\FurnitureFactory.Data.MySql.csproj">
+      <Project>{f9c06877-e9ab-43b8-b126-e3efaf869e70}</Project>
+      <Name>FurnitureFactory.Data.MySql</Name>
+    </ProjectReference>
     <ProjectReference Include="..\FurnitureFactory.Data\FurnitureFactory.Data.csproj">
       <Project>{ae84bf50-daeb-49c6-b4de-f09fa8b15fee}</Project>
       <Name>FurnitureFactory.Data</Name>
