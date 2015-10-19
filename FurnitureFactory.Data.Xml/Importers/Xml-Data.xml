@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<products>
+  <product>
+    <id></id>
+    <room>Bedroom</room>
+    <furnitureType>Bed</furnitureType>
+    <series>Comforta</series>
+    <price>300.00</price>
+    <manufacturingLeadTime>5</manufacturingLeadTime>
+    <weight>50</weight>
+  </product>
+  <product>
+    <id></id>
+    <room>Living Room</room>
+    <furnitureType>Tv stand</furnitureType>
+    <series>Feodalina</series>
+    <price>100.00</price>
+    <manufacturingLeadTime>3</manufacturingLeadTime>
+    <weight>6</weight>
+  </product>
+  <product>
+    <id></id>
+    <room>Storage</room>
+    <furnitureType>Rack</furnitureType>
+    <series>Gosho</series>
+    <price>200.00</price>
+    <manufacturingLeadTime>8</manufacturingLeadTime>
+    <weight>10</weight>
+  </product>  
+</products>

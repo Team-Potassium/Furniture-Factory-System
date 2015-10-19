@@ -5,6 +5,7 @@
     using FurnitureFactory.Data;
     using FurnitureFactory.Data.Json;
     using FurnitureFactory.Data.Xml.Exporters;
+    using FurnitureFactory.Data.Xml.Importers;
     using FurnitureFactory.Logic.DataImporters;
     using FurnitureFactory.Logic.Exporters;
     using Data.MongoDb;
@@ -53,6 +54,10 @@
 
             var ordersXmlReport = new OrdersXmlFileExporter(db);
             ordersXmlReport.GetXmlReport();
+
+            //// import XML file
+            //var importProducts = new ProductsXmlFileImporter();
+            //importProducts.ImportXmlData("../../../Xml-Data.xml");
 
 
             // Load excel from zip - Task1
