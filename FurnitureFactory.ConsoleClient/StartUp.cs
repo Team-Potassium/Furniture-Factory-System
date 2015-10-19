@@ -27,8 +27,8 @@
             //var mongodata = new MongoDbData(DatabaseName, io);
             //mongodata.Import(db);
 
-            //PdfExporter pdfExporter = new PdfExporter(db);
-            //pdfExporter.GeneratePdf();
+            PdfExporter pdfExporter = new PdfExporter(db);
+            pdfExporter.GeneratePdf();
 
             var furnituresForBedroom = db.Products
                 .Where(x => x.RoomId == 1)
