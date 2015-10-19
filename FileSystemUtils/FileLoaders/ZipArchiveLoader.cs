@@ -11,12 +11,18 @@
     /// </summary>
     public class ZipArchiveLoader : IArchiveLoader
     {
-        private ICollection<IFileLoader> fileLoaders;
         private readonly string fileExtension = "zip";
+
+        private ICollection<IFileLoader> fileLoaders;
 
         public ZipArchiveLoader()
         {
             this.fileLoaders = new List<IFileLoader>();
+        }
+
+        public string FileExtension
+        {
+            get { return this.fileExtension; }
         }
 
         public void Load(string sourceFilePath)
@@ -65,11 +71,6 @@
             }
 
             this.fileLoaders.Add(fileLoader);
-        }
-
-        public string FileExtension
-        {
-            get { return this.fileExtension; }
         }
     }
 }

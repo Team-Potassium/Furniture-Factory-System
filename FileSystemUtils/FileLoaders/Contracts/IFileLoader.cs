@@ -1,7 +1,7 @@
-﻿using FileSystemUtils.Contracts;
-
-namespace FileSystemUtils.FileLoaders
+﻿namespace FileSystemUtils.FileLoaders
 {
+    using FileSystemUtils.Contracts;
+
     /// <summary>
     /// Describes classes that load data from file of certain type.
     /// </summary>

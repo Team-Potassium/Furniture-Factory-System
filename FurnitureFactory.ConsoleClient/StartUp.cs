@@ -1,5 +1,4 @@
-﻿
-namespace FurnitureFactory.ConsoleClient
+﻿namespace FurnitureFactory.ConsoleClient
 {
     using System.Linq;
     using FileSystemUtils.FileLoaders;

@@ -15,7 +15,7 @@
         /// Imports data to DbContext. 
         /// </summary>
         /// <param name="data"></param>
-        void ImportData(IList<Object> data);
+        void ImportData(IList<object> data);
 
         /// <summary>
         /// Needed to save all the cached and unsaved DbContext changes.

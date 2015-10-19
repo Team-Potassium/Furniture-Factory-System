@@ -25,12 +25,12 @@
             // HDR - tells the provider that the source file has a header row
             string excelConnectionString = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" + filePath + ";Extended Properties='Excel 12.0 xml;HDR=NO;IMEX=1;'";
 
-            OleDbConnection dbCon = new OleDbConnection(excelConnectionString);
+            OleDbConnection databaseConnection = new OleDbConnection(excelConnectionString);
 
-            dbCon.Open();
-            using (dbCon)
+            databaseConnection.Open();
+            using (databaseConnection)
             {
-                OleDbCommand readCmd = new OleDbCommand("SELECT * FROM [Sales$]", dbCon);
+                OleDbCommand readCmd = new OleDbCommand("SELECT * FROM [Sales$]", databaseConnection);
                 var reader = readCmd.ExecuteReader();
 
                 using (reader)
@@ -39,7 +39,7 @@
                     {
                         while (reader.Read())
                         {
-                            IList<Object> currentRowFields = new List<Object>();
+                            IList<object> currentRowFields = new List<object>();
                             var columnCount = reader.FieldCount;
                             for (int i = 0; i < columnCount; i++)
                             {
