@@ -16,16 +16,16 @@
             //// var db = new SalesDbContext();
 
             var db = new FurnitureFactoryDbContext();
-
-            ////db.Database.Delete();
-            ////db.Database.Create();
-
             ConsoleUserInterfaceIO io = new ConsoleUserInterfaceIO();
-            var mongodata = new MongoDbData(DatabaseName, io);
-            mongodata.Import(db);
 
-            PdfExporter pdfExporter = new PdfExporter(db);
-            pdfExporter.GeneratePdf();
+            //db.Database.Delete();
+            //db.Database.Create();
+
+            //var mongodata = new MongoDbData(DatabaseName, io);
+            //mongodata.Import(db);
+
+            //PdfExporter pdfExporter = new PdfExporter(db);
+            //pdfExporter.GeneratePdf();
 
             var furnituresForBedroom = db.Products
                 .Where(x => x.RoomId == 1)
@@ -33,7 +33,7 @@
                 .ToList();
 
             //// Output must be: ALVIS \n  396    Tests, huh? :D
-            io.SetOutput(furnituresForBedroom.First());
+            io.SetOutput(furnituresForBedroom.FirstOrDefault());
             io.SetOutput(db.Products.Count());
         }
     }
