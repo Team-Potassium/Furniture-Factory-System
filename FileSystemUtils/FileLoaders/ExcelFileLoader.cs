@@ -3,12 +3,13 @@
     using System;
     using System.Collections.Generic;
     using System.Data.OleDb;
-    using System.Linq;
-    using System.Text;
+    using FileSystemUtils.Contracts;
 
     public class ExcelFileLoader : IFileLoader
     {
         private readonly string fileExtension = "xls";
+
+        private List<IDataImporter> dataLoaders = new List<IDataImporter>();
 
         public string FileExtension
         {
@@ -36,7 +37,6 @@
                 {
                     foreach (var dataLoader in this.dataLoaders)
                     {
-
                         while (reader.Read())
                         {
                             IList<Object> currentRowFields = new List<Object>();
@@ -47,19 +47,21 @@
                                 currentRowFields.Add(fieldContent);
                             }
 
-                            dataLoader.LoadData(currentRowFields);
+                            dataLoader.ImportData(currentRowFields);
                         }
                     }
+                }
+
+                foreach (var dataLoader in this.dataLoaders)
+                {
+                    dataLoader.FinalizeImporting();
                 }
             }
         }
 
-
-        public void AddDataLoader(IDataLoader dataLoader)
+        public void AddDataLoader(IDataImporter dataLoader)
         {
             this.dataLoaders.Add(dataLoader);
         }
-
-        private List<IDataLoader> dataLoaders = new List<IDataLoader>();
     }
 }

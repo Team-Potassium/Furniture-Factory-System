@@ -1,14 +1,10 @@
 ﻿namespace FurnitureFactory.ConsoleClient
 {
     using System.Linq;
-    using System.Runtime.CompilerServices;
-    using Data.MongoDb;
     using FileSystemUtils.FileLoaders;
     using FurnitureFactory.Data;
-    using FurnitureFactory.Logic.DataLoaders;
     using FurnitureFactory.Data.Json;
-    using FurnitureFactory.Data.MySql;
-    using FurnitureFactory.Logic.Exporters;
+    using FurnitureFactory.Logic.DataImporters;
 
     public class StartUp
     {
@@ -51,7 +47,7 @@
         {
             string sourceArchiveFilePath = @"..\..\..\Sales-Reports.zip";
 
-            var salesReportLoader = new SalesReportsDataLoader();
+            var salesReportLoader = new SalesReportsImporter();
 
             var excelFileLoader = new ExcelFileLoader();
             excelFileLoader.AddDataLoader(salesReportLoader);

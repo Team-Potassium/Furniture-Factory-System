@@ -55,9 +55,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="IDataLoader.cs" />
-    <Compile Include="FileLoaders\IArchiveLoader.cs" />
-    <Compile Include="FileLoaders\IFileLoader.cs" />
+    <Compile Include="FileLoaders\Contracts\IArchiveLoader.cs" />
+    <Compile Include="FileLoaders\Contracts\IFileLoader.cs" />
+    <Compile Include="Contracts\IDataImporter.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="FileLoaders\ExcelFileLoader.cs" />
     <Compile Include="FileLoaders\ZipArchiveLoader.cs" />
