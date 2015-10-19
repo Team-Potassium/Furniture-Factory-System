@@ -4,6 +4,7 @@
     using System.Runtime.CompilerServices;
     using Data.MongoDb;
     using FurnitureFactory.Data;
+    using FurnitureFactory.Data.Json;
     using FurnitureFactory.Data.MySql;
     using FurnitureFactory.Logic.Exporters;
 
@@ -33,8 +34,13 @@
                 .ToList();
 
             //// Output must be: ALVIS \n  396    Tests, huh? :D
+
             io.SetOutput(furnituresForBedroom.FirstOrDefault());
             io.SetOutput(db.Products.Count());
+
+            var jsonReporter = new JsonProductsReporter(db);
+            jsonReporter.GetJsonReport();
+
         }
     }
 }
