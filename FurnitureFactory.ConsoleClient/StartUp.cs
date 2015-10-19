@@ -39,7 +39,7 @@
             io.SetOutput(db.Products.Count());
 
             var jsonReporter = new JsonProductsReporter(db);
-            jsonReporter.GetJsonReport();
+            jsonReporter.GetJsonReport().Load();
 
         }
     }

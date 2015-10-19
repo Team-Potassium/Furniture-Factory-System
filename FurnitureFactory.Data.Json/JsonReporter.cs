@@ -15,19 +15,37 @@
         private const string NoProductsFound = "No products in database!";
 
         private readonly FurnitureFactoryDbContext db;
+        private JsonRepository localRepository = JsonRepository.GetInstance();
 
         public JsonProductsReporter(FurnitureFactoryDbContext db)
         {
             this.db = db;
+
         }
 
-        public void GetJsonReport()
+        public void Load()
         {
             if (!Directory.Exists(JsonFilePath))
             {
                 Directory.CreateDirectory(JsonFilePath);
             }
 
+            var data = this.localRepository.GetAllReports();
+
+            foreach (var product in data)
+            {
+                string json = JsonConvert.SerializeObject(product.Value, Formatting.Indented);
+
+                using (var writer = new StreamWriter(JsonFilePath + "/" + product.Key + FileExtension))
+                {
+                    writer.Write(json);
+                    Console.Write(".");
+                }
+            }
+        }
+
+        public JsonProductsReporter GetJsonReport()
+        {
             var products = this.db.Products
                .Select(pr =>
                new
@@ -44,21 +62,14 @@
 
             if (products.Any())
             {
-                foreach (var product in products)
-                {
-                    var json = JsonConvert.SerializeObject(product, Formatting.Indented);
-
-                    using (var writer = new StreamWriter(JsonFilePath + "/" + product.Id + FileExtension))
-                    {
-                        writer.Write(json);
-                        Console.Write(".");
-                    }
-                }
+                products.ForEach(x => this.localRepository.AddReport(x.CatalogNumber, x));
             }
             else
             {
                 Console.WriteLine(NoProductsFound);
             }
+
+            return this;
         }
     }
 }
