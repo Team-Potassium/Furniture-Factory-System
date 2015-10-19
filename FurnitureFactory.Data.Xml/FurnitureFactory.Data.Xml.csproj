@@ -50,6 +50,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Exporters\OrdersXmlFileExporter.cs" />
+    <Compile Include="Exporters\ProductsXmlFileExporter.cs" />
     <Compile Include="Exporters\XmlFileExporter.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

@@ -41,9 +41,12 @@
             jsonReporter.GetJsonReport().Load();
 
             // Generate Xml Report in Xml-Exports folder
-            var xml = new XmlFileExporter(db);
-            xml.GetXmlReportForOrders();
-            xml.GetXmlReportForProducts();
+            var productXmlReport = new ProductsXmlFileExporter(db);
+            productXmlReport.GetXmlReport();
+
+            var ordersXmlReport = new OrdersXmlFileExporter(db);
+            ordersXmlReport.GetXmlReport();
+
 
             // Load excel from zip - Task1
             LoadSalesReports();
