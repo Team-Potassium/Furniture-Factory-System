@@ -92,6 +92,10 @@
       <Project>{0547a1e5-5224-4ec1-a5d2-a0b96c5298dc}</Project>
       <Name>FurnitureFactory.MongoModels</Name>
     </ProjectReference>
+    <ProjectReference Include="..\ReportsLoader\FileSystemUtils.csproj">
+      <Project>{1c2d56cf-be75-40b3-88ae-ab13ddbd3f67}</Project>
+      <Name>FileSystemUtils</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

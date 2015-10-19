@@ -50,6 +50,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DataLoaders\ReportsDataLoader.cs" />
     <Compile Include="IImporter.cs" />
     <Compile Include="IUserInterfaceHandlerIO.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -57,6 +58,20 @@
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\FurnitureFactory.Data\FurnitureFactory.Data.csproj">
+      <Project>{ae84bf50-daeb-49c6-b4de-f09fa8b15fee}</Project>
+      <Name>FurnitureFactory.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\FurnitureFactory.Models\FurnitureFactory.Models.csproj">
+      <Project>{b687796c-baf8-42a3-b931-86c99c90de52}</Project>
+      <Name>FurnitureFactory.Models</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ReportsLoader\FileSystemUtils.csproj">
+      <Project>{1c2d56cf-be75-40b3-88ae-ab13ddbd3f67}</Project>
+      <Name>FileSystemUtils</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
