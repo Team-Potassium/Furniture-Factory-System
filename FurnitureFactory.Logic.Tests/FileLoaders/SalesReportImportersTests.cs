@@ -18,12 +18,12 @@ namespace FurnitureFactory.Logic.Tests.FileLoaders
         private Mock<FurnitureFactoryDbContext> dbMock = new Mock<FurnitureFactoryDbContext>();
 
         [TestMethod]
-        public void SalesReportsImporterShouldImportCorrectly()
+        public void SalesReportsImporterShouldImportCorrectDate()
         {
             DateTime date = new DateTime(2015, 6, 10);
 
             dbMock.Setup(db => db.Orders.Add(It.Is<Order>(
-                o => o.DeliveryDate == date)));
+                o => o.DeliveryDate == date))).Verifiable();
 
             var mockClients = new InMemoryDbSet<Client>() { new Client() { Id = 1 }};
             dbMock.Setup(db => db.Clients).Returns(mockClients);
@@ -41,7 +41,7 @@ namespace FurnitureFactory.Logic.Tests.FileLoaders
                 "1",    //  quantity
                 "2",    //  unused value
                 "3",    //  Price
-                date,   //  Date is inserted as last property
+                new DateTime(2015, 6, 10),   //  Date is inserted as last property
             };
 
             var salesReportImporter = new SalesReportsImporter();
@@ -49,6 +49,9 @@ namespace FurnitureFactory.Logic.Tests.FileLoaders
 
             salesReportImporter.ImportData(firstRecord);
             salesReportImporter.ImportData(secondRecord);
+
+            dbMock.Verify(db => db.Orders.Add(It.Is<Order>(
+                o => o.DeliveryDate == date)));
         }
     }
 }

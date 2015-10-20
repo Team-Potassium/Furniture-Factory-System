@@ -42,8 +42,8 @@
             io.SetOutput(db.Products.Count());
 
             // task 4.1
-            var jsonReporter = new JsonProductsReporter(db);
-            jsonReporter.GetJsonReport().Load();
+            //var jsonReporter = new JsonProductsReporter(db);
+            //jsonReporter.GetJsonReport().Load();
 
             // task 4.2
             //var mySqlImporter = new SalesReportsMySqlImporter(io);
