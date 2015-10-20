@@ -27,6 +27,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FileSystemUtils", "FileSyst
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FurnitureFactory.Data.SqLite", "FurnitureFactory.Data.SqLite\FurnitureFactory.Data.SqLite.csproj", "{EB62B2F3-C5AF-4454-A5C3-FB7B0E3C1D51}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Workbench", "Workbench\Workbench.csproj", "{AA59CFDF-5EE1-4745-9657-79D5D496D5F4}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -81,6 +83,10 @@ Global
 		{EB62B2F3-C5AF-4454-A5C3-FB7B0E3C1D51}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EB62B2F3-C5AF-4454-A5C3-FB7B0E3C1D51}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EB62B2F3-C5AF-4454-A5C3-FB7B0E3C1D51}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AA59CFDF-5EE1-4745-9657-79D5D496D5F4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AA59CFDF-5EE1-4745-9657-79D5D496D5F4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AA59CFDF-5EE1-4745-9657-79D5D496D5F4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AA59CFDF-5EE1-4745-9657-79D5D496D5F4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

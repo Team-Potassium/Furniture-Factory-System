@@ -21,18 +21,19 @@
             var db = new FurnitureFactoryDbContext();
             ConsoleUserInterfaceIO io = new ConsoleUserInterfaceIO();
 
-            db.Database.Delete();
-            db.Database.Create();
+            //db.Database.Delete();
+            //db.Database.Create();
 
-            var mongodata = new MongoDbData(DatabaseName, io);
-            mongodata.Import(db);
-            // Load excel from zip - Task1
-            LoadSalesReports();
+            //var mongodata = new MongoDbData(DatabaseName, io);
+            //mongodata.Import(db);
+            //// Load excel from zip - Task1
+            //LoadSalesReports();
 
-            new MaterialsXmlImporter().Import();
+            //new MaterialsXmlImporter().Import();
+            //new ProductionDetailsXmlImporter().Import();
 
-            //PdfExporter pdfExporter = new PdfExporter(db);
-            //pdfExporter.GeneratePdf();
+            PdfExporter pdfExporter = new PdfExporter(db);
+            pdfExporter.GeneratePdf();
 
             var furnituresForBedroom = db.Products
                 .Where(x => x.RoomId == 1)

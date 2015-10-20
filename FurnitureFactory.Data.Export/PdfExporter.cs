@@ -19,7 +19,7 @@ namespace FurnitureFactory.Logic.Exporters
         public void GeneratePdf()
         {
             var document = new Document();
-            PdfWriter.GetInstance(document, new FileStream("Reports.pdf", FileMode.Create));
+            PdfWriter.GetInstance(document, new FileStream("../../../Reports/Reports.pdf", FileMode.Create));
             document.Open();
             document.Add(this.CreateProductQuantityPriceTable());
             document.Add(this.GenerateProductTypeQuantityTable());
@@ -104,12 +104,17 @@ namespace FurnitureFactory.Logic.Exporters
         {
             PdfPTable table = this.CreateTable("Expenses by materials", new string[] { "Material", "Quantity", "Cost" });
             var result = this.context.Set<Order>()
-                .AsQueryable().Include("Product").Include("Materials").Include("ProductsMaterialsQuantity")
-                .SelectMany(o => this.context.Set<ProductsMaterialsQuantity>().Where(entry => entry.ProductId == o.ProductId).Select(entry => new
-                {
-                    Material = entry.Material,
-                    Quantity = entry.Quantity * o.Quantity,
-                }))
+                .AsQueryable()
+                .Include("Product")
+                .Include("Materials")
+                .Include("ProductsMaterialsQuantity")
+                .SelectMany(o => this.context.Set<ProductsMaterialsQuantity>()
+                        .Where(entry => entry.Id == o.ProductId)
+                        .Select(entry => new
+                        {
+                            Material = entry.Material,
+                            Quantity = entry.Quantity * o.Quantity,
+                        }))
                 .GroupBy(m => m.Material).Select(g =>
                     new
                     {
