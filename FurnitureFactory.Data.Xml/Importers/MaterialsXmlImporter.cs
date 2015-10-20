@@ -1,8 +1,6 @@
-﻿namespace FurnitureFactory.Data.Xml.Importers
+﻿namespace FurnitureFactory.Data.Manager.Importers
 {
     using System;
-    using System.Collections.Generic;
-    using System.Data.Entity.Core.Metadata.Edm;
     using System.Xml.Linq;
     using Models;
 

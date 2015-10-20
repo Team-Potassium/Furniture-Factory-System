@@ -17,11 +17,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FurnitureFactory.Logic", "F
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FurnitureFactory.Data.MySql", "FurnitureFactory.Data.MySql\FurnitureFactory.Data.MySql.csproj", "{F9C06877-E9AB-43B8-B126-E3EFAF869E70}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FurnitureFactory.Data.Export", "FurnitureFactory.Data.Export\FurnitureFactory.Data.Export.csproj", "{D2101016-AD1F-40AC-BB6C-7840E21129A3}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FurnitureFactory.Data.Reports", "FurnitureFactory.Data.Json\FurnitureFactory.Data.Reports.csproj", "{386E8CC5-C0B2-4E6E-BEE5-D6E5BD046964}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FurnitureFactory.Data.Json", "FurnitureFactory.Data.Json\FurnitureFactory.Data.Json.csproj", "{386E8CC5-C0B2-4E6E-BEE5-D6E5BD046964}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FurnitureFactory.Data.Xml", "FurnitureFactory.Data.Xml\FurnitureFactory.Data.Xml.csproj", "{36D707ED-3655-4E86-9D8B-B0CFAAB57E8C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FurnitureFactory.Data.Manager", "FurnitureFactory.Data.Xml\FurnitureFactory.Data.Manager.csproj", "{36D707ED-3655-4E86-9D8B-B0CFAAB57E8C}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FileSystemUtils", "FileSystemUtils\FileSystemUtils.csproj", "{1C2D56CF-BE75-40B3-88AE-AB13DDBD3F67}"
 EndProject
@@ -63,10 +61,6 @@ Global
 		{F9C06877-E9AB-43B8-B126-E3EFAF869E70}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F9C06877-E9AB-43B8-B126-E3EFAF869E70}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F9C06877-E9AB-43B8-B126-E3EFAF869E70}.Release|Any CPU.Build.0 = Release|Any CPU
-		{D2101016-AD1F-40AC-BB6C-7840E21129A3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{D2101016-AD1F-40AC-BB6C-7840E21129A3}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{D2101016-AD1F-40AC-BB6C-7840E21129A3}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{D2101016-AD1F-40AC-BB6C-7840E21129A3}.Release|Any CPU.Build.0 = Release|Any CPU
 		{386E8CC5-C0B2-4E6E-BEE5-D6E5BD046964}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{386E8CC5-C0B2-4E6E-BEE5-D6E5BD046964}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{386E8CC5-C0B2-4E6E-BEE5-D6E5BD046964}.Release|Any CPU.ActiveCfg = Release|Any CPU

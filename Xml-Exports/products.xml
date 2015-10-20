@@ -1,0 +1,559 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<products>
+  <product weight="20">
+    <production-info product-id="Y1115" expense="253.00" time="12" />
+    <production-info product-id="A1217" expense="125.00" time="18" />
+    <production-info product-id="G1337" expense="75.00" time="9" />
+    <production-info product-id="G1387" expense="164.00" time="13" />
+  </product>
+  <product weight="21">
+    <production-info product-id="V1345" expense="77.00" time="6" />
+    <production-info product-id="V1246" expense="336.00" time="5" />
+  </product>
+  <product weight="22">
+    <production-info product-id="S1045" expense="364.00" time="15" />
+    <production-info product-id="A1347" expense="262.00" time="7" />
+    <production-info product-id="S1376" expense="126.00" time="8" />
+    <production-info product-id="A1382" expense="100.00" time="15" />
+    <production-info product-id="J1373" expense="30.00" time="19" />
+  </product>
+  <product weight="23">
+    <production-info product-id="E1366" expense="238.00" time="4" />
+    <production-info product-id="K1394" expense="153.00" time="16" />
+    <production-info product-id="A1348" expense="209.00" time="16" />
+    <production-info product-id="V1312" expense="109.00" time="12" />
+    <production-info product-id="S1193" expense="215.00" time="14" />
+  </product>
+  <product weight="24">
+    <production-info product-id="B1232" expense="317.00" time="9" />
+    <production-info product-id="G1009" expense="329.00" time="8" />
+    <production-info product-id="Y1082" expense="114.00" time="11" />
+    <production-info product-id="A1352" expense="75.00" time="17" />
+  </product>
+  <product weight="25">
+    <production-info product-id="S1342" expense="383.00" time="11" />
+    <production-info product-id="F1303" expense="180.00" time="8" />
+    <production-info product-id="L1091" expense="348.00" time="4" />
+    <production-info product-id="A1253" expense="167.00" time="9" />
+    <production-info product-id="E1267" expense="194.00" time="14" />
+    <production-info product-id="F1270" expense="291.00" time="13" />
+    <production-info product-id="G1271" expense="334.00" time="16" />
+    <production-info product-id="Y1181" expense="73.00" time="3" />
+    <production-info product-id="B1166" expense="359.00" time="10" />
+    <production-info product-id="E1169" expense="60.00" time="10" />
+  </product>
+  <product weight="26">
+    <production-info product-id="G1172" expense="358.00" time="13" />
+    <production-info product-id="A1184" expense="47.00" time="11" />
+    <production-info product-id="S1226" expense="159.00" time="7" />
+    <production-info product-id="S1143" expense="345.00" time="3" />
+    <production-info product-id="Y1016" expense="192.00" time="11" />
+  </product>
+  <product weight="27">
+    <production-info product-id="A1023" expense="65.00" time="14" />
+    <production-info product-id="L1223" expense="291.00" time="10" />
+    <production-info product-id="Y1214" expense="35.00" time="7" />
+    <production-info product-id="E1234" expense="220.00" time="10" />
+    <production-info product-id="T1197" expense="136.00" time="12" />
+    <production-info product-id="A1316" expense="91.00" time="10" />
+  </product>
+  <product weight="28">
+    <production-info product-id="G1339" expense="191.00" time="9" />
+    <production-info product-id="E1202" expense="292.00" time="17" />
+    <production-info product-id="V1146" expense="336.00" time="13" />
+    <production-info product-id="S1276" expense="30.00" time="8" />
+    <production-info product-id="A1052" expense="223.00" time="12" />
+  </product>
+  <product weight="29">
+    <production-info product-id="G1008" expense="233.00" time="12" />
+    <production-info product-id="A1116" expense="32.00" time="6" />
+    <production-info product-id="B1101" expense="62.00" time="4" />
+    <production-info product-id="G1222" expense="331.00" time="14" />
+    <production-info product-id="S1374" expense="268.00" time="14" />
+  </product>
+  <product weight="30">
+    <production-info product-id="A1384" expense="112.00" time="12" />
+    <production-info product-id="A1165" expense="113.00" time="7" />
+    <production-info product-id="I1195" expense="252.00" time="19" />
+    <production-info product-id="A1185" expense="306.00" time="9" />
+    <production-info product-id="G1123" expense="359.00" time="11" />
+  </product>
+  <product weight="31">
+    <production-info product-id="I1063" expense="373.00" time="9" />
+    <production-info product-id="V1213" expense="319.00" time="18" />
+    <production-info product-id="S1309" expense="340.00" time="15" />
+  </product>
+  <product weight="32">
+    <production-info product-id="S1275" expense="332.00" time="9" />
+    <production-info product-id="S1341" expense="103.00" time="13" />
+    <production-info product-id="T1329" expense="149.00" time="14" />
+    <production-info product-id="G1370" expense="164.00" time="11" />
+    <production-info product-id="I1258" expense="126.00" time="16" />
+    <production-info product-id="I1030" expense="347.00" time="18" />
+    <production-info product-id="T1032" expense="287.00" time="11" />
+    <production-info product-id="A1132" expense="82.00" time="6" />
+    <production-info product-id="A1085" expense="255.00" time="7" />
+  </product>
+  <product weight="33">
+    <production-info product-id="J1010" expense="226.00" time="5" />
+    <production-info product-id="A1248" expense="71.00" time="15" />
+    <production-info product-id="S1210" expense="97.00" time="7" />
+    <production-info product-id="A1319" expense="325.00" time="4" />
+    <production-info product-id="S1325" expense="178.00" time="11" />
+  </product>
+  <product weight="34">
+    <production-info product-id="S1292" expense="294.00" time="6" />
+    <production-info product-id="A1186" expense="188.00" time="13" />
+    <production-info product-id="U1158" expense="321.00" time="10" />
+    <production-info product-id="I1162" expense="313.00" time="18" />
+  </product>
+  <product weight="35">
+    <production-info product-id="V1378" expense="315.00" time="7" />
+  </product>
+  <product weight="36">
+    <production-info product-id="L1355" expense="175.00" time="15" />
+    <production-info product-id="A1287" expense="236.00" time="15" />
+    <production-info product-id="V1311" expense="316.00" time="8" />
+    <production-info product-id="A1351" expense="281.00" time="13" />
+    <production-info product-id="S1176" expense="364.00" time="12" />
+    <production-info product-id="G1238" expense="143.00" time="10" />
+    <production-info product-id="A1021" expense="374.00" time="18" />
+    <production-info product-id="S1078" expense="171.00" time="16" />
+    <production-info product-id="B1133" expense="81.00" time="6" />
+  </product>
+  <product weight="37">
+    <production-info product-id="E1136" expense="355.00" time="9" />
+    <production-info product-id="A1218" expense="278.00" time="10" />
+    <production-info product-id="B1265" expense="380.00" time="14" />
+  </product>
+  <product weight="38">
+    <production-info product-id="F1236" expense="270.00" time="5" />
+    <production-info product-id="A1249" expense="363.00" time="6" />
+    <production-info product-id="S1242" expense="113.00" time="17" />
+    <production-info product-id="L1157" expense="349.00" time="6" />
+    <production-info product-id="V1147" expense="91.00" time="5" />
+    <production-info product-id="S1194" expense="382.00" time="18" />
+    <production-info product-id="E1102" expense="54.00" time="9" />
+    <production-info product-id="G1371" expense="117.00" time="13" />
+  </product>
+  <product weight="39">
+    <production-info product-id="A1314" expense="283.00" time="16" />
+    <production-info product-id="G1107" expense="378.00" time="19" />
+    <production-info product-id="G1075" expense="224.00" time="10" />
+    <production-info product-id="G1205" expense="81.00" time="6" />
+  </product>
+  <product weight="40">
+    <production-info product-id="S1211" expense="53.00" time="16" />
+    <production-info product-id="A1149" expense="288.00" time="13" />
+    <production-info product-id="G1240" expense="100.00" time="14" />
+    <production-info product-id="L1256" expense="112.00" time="5" />
+    <production-info product-id="Y1247" expense="185.00" time="11" />
+    <production-info product-id="A1121" expense="214.00" time="11" />
+  </product>
+  <product weight="41">
+    <production-info product-id="I1324" expense="164.00" time="7" />
+  </product>
+  <product weight="42">
+    <production-info product-id="S1343" expense="269.00" time="6" />
+    <production-info product-id="K1295" expense="98.00" time="10" />
+    <production-info product-id="V1081" expense="382.00" time="11" />
+    <production-info product-id="L1025" expense="346.00" time="16" />
+    <production-info product-id="V1245" expense="92.00" time="5" />
+    <production-info product-id="G1239" expense="194.00" time="18" />
+  </product>
+  <product weight="43">
+    <production-info product-id="F1005" expense="175.00" time="11" />
+    <production-info product-id="F1006" expense="241.00" time="7" />
+    <production-info product-id="A1054" expense="83.00" time="16" />
+    <production-info product-id="J1043" expense="262.00" time="5" />
+    <production-info product-id="A1318" expense="57.00" time="6" />
+  </product>
+  <product weight="44">
+    <production-info product-id="I1327" expense="141.00" time="14" />
+    <production-info product-id="A1317" expense="222.00" time="19" />
+    <production-info product-id="G1273" expense="392.00" time="19" />
+    <production-info product-id="A1150" expense="367.00" time="4" />
+  </product>
+  <product weight="45">
+    <production-info product-id="G1173" expense="182.00" time="9" />
+    <production-info product-id="U1026" expense="120.00" time="11" />
+  </product>
+  <product weight="46">
+    <production-info product-id="E1036" expense="185.00" time="10" />
+    <production-info product-id="L1058" expense="263.00" time="15" />
+    <production-info product-id="A1066" expense="96.00" time="6" />
+    <production-info product-id="T1164" expense="399.00" time="10" />
+    <production-info product-id="J1208" expense="258.00" time="14" />
+    <production-info product-id="K1196" expense="267.00" time="19" />
+    <production-info product-id="B1266" expense="346.00" time="15" />
+    <production-info product-id="G1306" expense="180.00" time="7" />
+    <production-info product-id="A1285" expense="40.00" time="7" />
+  </product>
+  <product weight="47">
+    <production-info product-id="I1291" expense="31.00" time="7" />
+    <production-info product-id="K1328" expense="48.00" time="18" />
+    <production-info product-id="K1229" expense="86.00" time="9" />
+    <production-info product-id="B1199" expense="237.00" time="7" />
+    <production-info product-id="A1154" expense="370.00" time="3" />
+    <production-info product-id="U1125" expense="95.00" time="7" />
+  </product>
+  <product weight="48">
+    <production-info product-id="G1042" expense="375.00" time="13" />
+    <production-info product-id="F1171" expense="97.00" time="14" />
+    <production-info product-id="U1224" expense="159.00" time="18" />
+    <production-info product-id="L1322" expense="195.00" time="9" />
+    <production-info product-id="S1375" expense="49.00" time="14" />
+    <production-info product-id="A1363" expense="233.00" time="3" />
+  </product>
+  <product weight="49">
+    <production-info product-id="A1220" expense="74.00" time="18" />
+    <production-info product-id="A1188" expense="345.00" time="14" />
+    <production-info product-id="G1141" expense="306.00" time="5" />
+    <production-info product-id="A1087" expense="185.00" time="11" />
+  </product>
+  <product weight="50">
+    <production-info product-id="V1048" expense="119.00" time="12" />
+    <production-info product-id="F1038" expense="121.00" time="9" />
+    <production-info product-id="B1200" expense="288.00" time="10" />
+    <production-info product-id="A1219" expense="372.00" time="6" />
+    <production-info product-id="U1389" expense="228.00" time="10" />
+    <production-info product-id="S1391" expense="117.00" time="7" />
+  </product>
+  <product weight="51">
+    <production-info product-id="L1388" expense="239.00" time="10" />
+    <production-info product-id="A1380" expense="302.00" time="12" />
+    <production-info product-id="A1254" expense="308.00" time="7" />
+    <production-info product-id="V1114" expense="282.00" time="13" />
+  </product>
+  <product weight="52">
+    <production-info product-id="J1076" expense="46.00" time="13" />
+    <production-info product-id="I1228" expense="309.00" time="18" />
+    <production-info product-id="I1192" expense="346.00" time="10" />
+    <production-info product-id="U1356" expense="121.00" time="5" />
+    <production-info product-id="G1305" expense="318.00" time="3" />
+    <production-info product-id="B1299" expense="174.00" time="12" />
+  </product>
+  <product weight="53">
+    <production-info product-id="S1178" expense="303.00" time="15" />
+    <production-info product-id="I1261" expense="31.00" time="12" />
+    <production-info product-id="A1033" expense="212.00" time="16" />
+    <production-info product-id="E1003" expense="188.00" time="9" />
+  </product>
+  <product weight="54">
+    <production-info product-id="S1061" expense="187.00" time="4" />
+    <production-info product-id="F1104" expense="219.00" time="16" />
+    <production-info product-id="A1315" expense="316.00" time="5" />
+  </product>
+  <product weight="55">
+    <production-info product-id="Y1379" expense="160.00" time="8" />
+    <production-info product-id="K1097" expense="51.00" time="16" />
+    <production-info product-id="S1077" expense="164.00" time="7" />
+    <production-info product-id="S1013" expense="361.00" time="14" />
+    <production-info product-id="T1263" expense="353.00" time="11" />
+    <production-info product-id="E1201" expense="344.00" time="3" />
+    <production-info product-id="G1207" expense="118.00" time="6" />
+  </product>
+  <product weight="56">
+    <production-info product-id="S1011" expense="117.00" time="14" />
+    <production-info product-id="G1354" expense="268.00" time="9" />
+    <production-info product-id="K1361" expense="212.00" time="15" />
+    <production-info product-id="U1323" expense="219.00" time="12" />
+  </product>
+  <product weight="57">
+    <production-info product-id="E1300" expense="176.00" time="7" />
+    <production-info product-id="A1286" expense="194.00" time="5" />
+    <production-info product-id="A1022" expense="124.00" time="16" />
+    <production-info product-id="B1067" expense="246.00" time="8" />
+    <production-info product-id="V1047" expense="208.00" time="15" />
+    <production-info product-id="E1135" expense="392.00" time="11" />
+    <production-info product-id="K1130" expense="311.00" time="4" />
+    <production-info product-id="S1209" expense="330.00" time="11" />
+    <production-info product-id="V1180" expense="46.00" time="14" />
+  </product>
+  <product weight="58">
+    <production-info product-id="A1250" expense="323.00" time="8" />
+    <production-info product-id="V1080" expense="314.00" time="6" />
+    <production-info product-id="A1099" expense="72.00" time="17" />
+    <production-info product-id="S1062" expense="311.00" time="11" />
+    <production-info product-id="G1288" expense="192.00" time="15" />
+  </product>
+  <product weight="59">
+    <production-info product-id="A1117" expense="327.00" time="11" />
+  </product>
+  <product weight="60">
+    <production-info product-id="I1096" expense="215.00" time="16" />
+    <production-info product-id="B1035" expense="396.00" time="11" />
+    <production-info product-id="A1198" expense="291.00" time="18" />
+    <production-info product-id="A1330" expense="366.00" time="10" />
+    <production-info product-id="E1367" expense="342.00" time="7" />
+    <production-info product-id="S1392" expense="266.00" time="14" />
+  </product>
+  <product weight="61">
+    <production-info product-id="T1395" expense="104.00" time="15" />
+    <production-info product-id="F1039" expense="390.00" time="19" />
+    <production-info product-id="B1100" expense="183.00" time="15" />
+  </product>
+  <product weight="62">
+    <production-info product-id="F1071" expense="176.00" time="15" />
+    <production-info product-id="S1110" expense="174.00" time="5" />
+    <production-info product-id="A1050" expense="237.00" time="15" />
+    <production-info product-id="E1069" expense="237.00" time="3" />
+    <production-info product-id="A1381" expense="384.00" time="6" />
+  </product>
+  <product weight="63">
+    <production-info product-id="S1111" expense="91.00" time="7" />
+    <production-info product-id="A1122" expense="168.00" time="8" />
+    <production-info product-id="J1142" expense="275.00" time="13" />
+    <production-info product-id="F1170" expense="294.00" time="19" />
+    <production-info product-id="K1262" expense="170.00" time="4" />
+    <production-info product-id="F1269" expense="298.00" time="11" />
+  </product>
+  <product weight="64">
+    <production-info product-id="S1127" expense="383.00" time="4" />
+    <production-info product-id="S1112" expense="173.00" time="4" />
+    <production-info product-id="G1090" expense="146.00" time="16" />
+    <production-info product-id="E1004" expense="50.00" time="5" />
+    <production-info product-id="A1385" expense="34.00" time="6" />
+    <production-info product-id="T1362" expense="190.00" time="14" />
+  </product>
+  <product weight="65">
+    <production-info product-id="A1386" expense="176.00" time="4" />
+    <production-info product-id="A1349" expense="215.00" time="13" />
+    <production-info product-id="A1019" expense="323.00" time="6" />
+    <production-info product-id="S1029" expense="94.00" time="18" />
+    <production-info product-id="G1174" expense="232.00" time="10" />
+  </product>
+  <product weight="66">
+    <production-info product-id="G1024" expense="274.00" time="14" />
+  </product>
+  <product weight="67">
+    <production-info product-id="Y1280" expense="287.00" time="14" />
+    <production-info product-id="A1221" expense="269.00" time="6" />
+    <production-info product-id="F1302" expense="103.00" time="11" />
+    <production-info product-id="F1369" expense="347.00" time="8" />
+  </product>
+  <product weight="68">
+    <production-info product-id="A1183" expense="389.00" time="8" />
+    <production-info product-id="A1018" expense="144.00" time="4" />
+    <production-info product-id="A1120" expense="88.00" time="19" />
+  </product>
+  <product weight="69">
+    <production-info product-id="S1144" expense="99.00" time="14" />
+    <production-info product-id="L1124" expense="149.00" time="3" />
+    <production-info product-id="A1083" expense="178.00" time="18" />
+    <production-info product-id="J1274" expense="98.00" time="8" />
+    <production-info product-id="V1377" expense="376.00" time="4" />
+    <production-info product-id="B1331" expense="353.00" time="6" />
+  </product>
+  <product weight="70">
+    <production-info product-id="S1310" expense="181.00" time="8" />
+    <production-info product-id="S1260" expense="235.00" time="8" />
+    <production-info product-id="S1128" expense="261.00" time="12" />
+    <production-info product-id="S1012" expense="297.00" time="9" />
+  </product>
+  <product weight="71">
+    <production-info product-id="U1092" expense="116.00" time="9" />
+    <production-info product-id="A1282" expense="168.00" time="15" />
+    <production-info product-id="V1278" expense="247.00" time="4" />
+    <production-info product-id="A1215" expense="157.00" time="12" />
+  </product>
+  <product weight="72">
+    <production-info product-id="S1044" expense="75.00" time="15" />
+    <production-info product-id="E1301" expense="376.00" time="7" />
+  </product>
+  <product weight="73">
+    <production-info product-id="J1307" expense="105.00" time="19" />
+    <production-info product-id="F1336" expense="42.00" time="14" />
+    <production-info product-id="A1353" expense="305.00" time="14" />
+    <production-info product-id="J1340" expense="268.00" time="5" />
+    <production-info product-id="B1068" expense="124.00" time="6" />
+    <production-info product-id="A1056" expense="63.00" time="8" />
+    <production-info product-id="G1206" expense="280.00" time="7" />
+  </product>
+  <product weight="74">
+    <production-info product-id="Y1148" expense="246.00" time="8" />
+    <production-info product-id="T1098" expense="62.00" time="8" />
+    <production-info product-id="G1372" expense="328.00" time="5" />
+  </product>
+  <product weight="75">
+    <production-info product-id="G1338" expense="121.00" time="13" />
+    <production-info product-id="S1293" expense="304.00" time="10" />
+    <production-info product-id="B1001" expense="318.00" time="5" />
+    <production-info product-id="U1191" expense="101.00" time="9" />
+  </product>
+  <product weight="76">
+    <production-info product-id="G1156" expense="85.00" time="13" />
+    <production-info product-id="A1216" expense="74.00" time="12" />
+    <production-info product-id="V1279" expense="241.00" time="3" />
+    <production-info product-id="G1272" expense="189.00" time="15" />
+    <production-info product-id="V1014" expense="186.00" time="3" />
+    <production-info product-id="U1059" expense="185.00" time="14" />
+    <production-info product-id="I1126" expense="341.00" time="17" />
+    <production-info product-id="L1289" expense="79.00" time="6" />
+    <production-info product-id="G1304" expense="85.00" time="14" />
+  </product>
+  <product weight="77">
+    <production-info product-id="U1290" expense="183.00" time="17" />
+    <production-info product-id="F1335" expense="266.00" time="5" />
+    <production-info product-id="F1368" expense="92.00" time="7" />
+    <production-info product-id="B1364" expense="387.00" time="14" />
+    <production-info product-id="F1072" expense="67.00" time="15" />
+    <production-info product-id="G1073" expense="346.00" time="7" />
+    <production-info product-id="E1268" expense="389.00" time="17" />
+    <production-info product-id="G1255" expense="168.00" time="9" />
+    <production-info product-id="J1241" expense="318.00" time="14" />
+    <production-info product-id="S1177" expense="46.00" time="13" />
+  </product>
+  <product weight="78">
+    <production-info product-id="A1155" expense="80.00" time="7" />
+    <production-info product-id="G1140" expense="259.00" time="8" />
+    <production-info product-id="B1134" expense="199.00" time="4" />
+    <production-info product-id="A1051" expense="264.00" time="7" />
+    <production-info product-id="Y1346" expense="181.00" time="9" />
+    <production-info product-id="S1308" expense="346.00" time="4" />
+  </product>
+  <product weight="79">
+    <production-info product-id="A1284" expense="217.00" time="17" />
+    <production-info product-id="A1320" expense="374.00" time="9" />
+    <production-info product-id="G1041" expense="361.00" time="7" />
+    <production-info product-id="A1000" expense="149.00" time="18" />
+    <production-info product-id="A1020" expense="243.00" time="15" />
+    <production-info product-id="J1109" expense="71.00" time="16" />
+    <production-info product-id="V1113" expense="259.00" time="15" />
+    <production-info product-id="S1094" expense="99.00" time="13" />
+    <production-info product-id="J1175" expense="368.00" time="17" />
+    <production-info product-id="S1244" expense="355.00" time="17" />
+    <production-info product-id="A1252" expense="270.00" time="15" />
+    <production-info product-id="A1264" expense="226.00" time="10" />
+  </product>
+  <product weight="80">
+    <production-info product-id="U1257" expense="373.00" time="13" />
+    <production-info product-id="E1037" expense="150.00" time="12" />
+    <production-info product-id="V1344" expense="172.00" time="5" />
+  </product>
+  <product weight="81">
+    <production-info product-id="I1027" expense="98.00" time="9" />
+    <production-info product-id="A1086" expense="216.00" time="15" />
+    <production-info product-id="T1131" expense="297.00" time="10" />
+    <production-info product-id="F1137" expense="193.00" time="10" />
+  </product>
+  <product weight="82">
+    <production-info product-id="A1118" expense="235.00" time="11" />
+    <production-info product-id="B1332" expense="99.00" time="7" />
+  </product>
+  <product weight="83">
+    <production-info product-id="E1333" expense="125.00" time="8" />
+    <production-info product-id="I1294" expense="221.00" time="8" />
+    <production-info product-id="I1129" expense="43.00" time="13" />
+    <production-info product-id="I1060" expense="164.00" time="11" />
+    <production-info product-id="A1055" expense="41.00" time="6" />
+    <production-info product-id="K1163" expense="299.00" time="3" />
+    <production-info product-id="A1182" expense="119.00" time="16" />
+  </product>
+  <product weight="84">
+    <production-info product-id="I1159" expense="213.00" time="5" />
+  </product>
+  <product weight="85">
+    <production-info product-id="S1359" expense="269.00" time="15" />
+  </product>
+  <product weight="86">
+    <production-info product-id="A1383" expense="212.00" time="7" />
+    <production-info product-id="I1390" expense="42.00" time="10" />
+    <production-info product-id="A1119" expense="131.00" time="13" />
+  </product>
+  <product weight="87">
+    <production-info product-id="S1358" expense="166.00" time="3" />
+    <production-info product-id="T1296" expense="98.00" time="12" />
+    <production-info product-id="A1350" expense="376.00" time="15" />
+  </product>
+  <product weight="88">
+    <production-info product-id="I1360" expense="69.00" time="10" />
+    <production-info product-id="F1138" expense="73.00" time="6" />
+    <production-info product-id="A1088" expense="75.00" time="3" />
+    <production-info product-id="S1079" expense="149.00" time="5" />
+    <production-info product-id="B1034" expense="202.00" time="8" />
+    <production-info product-id="S1243" expense="165.00" time="15" />
+  </product>
+  <product weight="89">
+    <production-info product-id="A1251" expense="316.00" time="8" />
+    <production-info product-id="T1230" expense="43.00" time="15" />
+  </product>
+  <product weight="90">
+    <production-info product-id="A1281" expense="399.00" time="5" />
+    <production-info product-id="A1153" expense="163.00" time="8" />
+    <production-info product-id="F1105" expense="352.00" time="6" />
+    <production-info product-id="A1297" expense="148.00" time="5" />
+  </product>
+  <product weight="91">
+    <production-info product-id="E1334" expense="57.00" time="14" />
+    <production-info product-id="G1139" expense="45.00" time="17" />
+    <production-info product-id="A1053" expense="71.00" time="3" />
+    <production-info product-id="G1040" expense="112.00" time="4" />
+    <production-info product-id="S1046" expense="369.00" time="19" />
+    <production-info product-id="A1151" expense="124.00" time="11" />
+    <production-info product-id="V1179" expense="398.00" time="15" />
+    <production-info product-id="E1168" expense="236.00" time="3" />
+    <production-info product-id="V1212" expense="278.00" time="4" />
+  </product>
+  <product weight="92">
+    <production-info product-id="A1187" expense="83.00" time="6" />
+    <production-info product-id="L1190" expense="376.00" time="18" />
+    <production-info product-id="B1233" expense="215.00" time="12" />
+    <production-info product-id="E1103" expense="352.00" time="9" />
+    <production-info product-id="I1093" expense="284.00" time="8" />
+    <production-info product-id="B1365" expense="54.00" time="19" />
+  </product>
+  <product weight="93">
+    <production-info product-id="S1095" expense="321.00" time="5" />
+    <production-info product-id="G1106" expense="263.00" time="8" />
+    <production-info product-id="E1070" expense="180.00" time="4" />
+    <production-info product-id="S1227" expense="284.00" time="14" />
+    <production-info product-id="A1283" expense="283.00" time="11" />
+    <production-info product-id="S1259" expense="34.00" time="14" />
+  </product>
+  <product weight="94">
+    <production-info product-id="S1277" expense="378.00" time="5" />
+    <production-info product-id="I1225" expense="225.00" time="6" />
+    <production-info product-id="S1161" expense="136.00" time="18" />
+    <production-info product-id="K1064" expense="372.00" time="16" />
+    <production-info product-id="Y1049" expense="180.00" time="16" />
+    <production-info product-id="V1015" expense="56.00" time="7" />
+    <production-info product-id="S1326" expense="188.00" time="4" />
+    <production-info product-id="B1298" expense="118.00" time="5" />
+    <production-info product-id="Y1313" expense="80.00" time="19" />
+  </product>
+  <product weight="95">
+    <production-info product-id="G1007" expense="107.00" time="8" />
+    <production-info product-id="K1031" expense="51.00" time="8" />
+    <production-info product-id="A1084" expense="118.00" time="8" />
+    <production-info product-id="G1189" expense="336.00" time="10" />
+  </product>
+  <product weight="96">
+    <production-info product-id="G1108" expense="200.00" time="7" />
+  </product>
+  <product weight="97">
+    <production-info product-id="A1089" expense="205.00" time="3" />
+    <production-info product-id="G1074" expense="146.00" time="5" />
+    <production-info product-id="T1065" expense="399.00" time="8" />
+    <production-info product-id="G1057" expense="161.00" time="3" />
+    <production-info product-id="F1204" expense="296.00" time="18" />
+    <production-info product-id="F1237" expense="137.00" time="12" />
+    <production-info product-id="I1393" expense="245.00" time="17" />
+  </product>
+  <product weight="98">
+    <production-info product-id="I1357" expense="277.00" time="3" />
+    <production-info product-id="F1203" expense="172.00" time="18" />
+    <production-info product-id="S1028" expense="390.00" time="9" />
+  </product>
+  <product weight="99">
+    <production-info product-id="B1002" expense="239.00" time="3" />
+    <production-info product-id="A1017" expense="86.00" time="5" />
+    <production-info product-id="S1145" expense="218.00" time="11" />
+    <production-info product-id="B1167" expense="382.00" time="12" />
+    <production-info product-id="A1152" expense="203.00" time="15" />
+    <production-info product-id="S1160" expense="284.00" time="19" />
+    <production-info product-id="E1235" expense="258.00" time="18" />
+    <production-info product-id="A1231" expense="218.00" time="14" />
+    <production-info product-id="G1321" expense="194.00" time="19" />
+  </product>
+</products>

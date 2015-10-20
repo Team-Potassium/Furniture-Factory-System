@@ -1,12 +1,14 @@
 ﻿namespace FurnitureFactory.Data.MongoDb
 {
+    using System.Collections.Generic;
     using System.Data.Entity;
     using System.Data.Entity.Migrations;
     using System.Linq;
     using Logic;
     using MongoDB.Driver;
+    using MongoModels;
 
-    public class MongoDbDataImporter : IImporter
+    public class MongoDbDataImporter 
     {
         private static MongoDbDataImporter instance = null;
         private int nextFreeCatalogNumber = 1000;
@@ -47,7 +49,7 @@
             this.Db.SaveChanges();
         }
 
-        public void ImportRooms()
+       public void ImportRooms()
         {
             var mongoRooms = this.MongoDataManager.GetCollectionAsList<MongoModels.Room>("rooms");
 

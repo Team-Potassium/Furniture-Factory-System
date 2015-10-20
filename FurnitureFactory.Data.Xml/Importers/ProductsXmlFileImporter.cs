@@ -1,10 +1,10 @@
-﻿using System.Configuration;
-using System.Data;
-using System.Data.SqlClient;
-using System.IO;
-
-namespace FurnitureFactory.Data.Xml.Importers
+﻿namespace FurnitureFactory.Data.Manager.Importers
 {
+    using System.Configuration;
+    using System.Data;
+    using System.Data.SqlClient;
+    using System.IO;
+
     public class ProductsXmlFileImporter: XmlFileImporter
     {
         public override void ImportXmlData(string filepath)

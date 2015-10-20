@@ -1,4 +1,4 @@
-﻿namespace FurnitureFactory.Data.Xml.Importers
+﻿namespace FurnitureFactory.Data.Manager.Importers
 {
     using System;
     using System.Xml.Linq;

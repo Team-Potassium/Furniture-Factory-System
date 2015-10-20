@@ -1,7 +1,6 @@
-﻿namespace FurnitureFactory.Data.Json
+﻿namespace FurnitureFactory.Data.Reports
 {
     using System.Collections.Generic;
-    using System.Linq;
 
     public class JsonRepository
     {

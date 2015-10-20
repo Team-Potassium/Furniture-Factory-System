@@ -1,9 +1,9 @@
-﻿namespace FurnitureFactory.Data.Json
+﻿namespace FurnitureFactory.Data.Reports
 {
     using System;
     using System.IO;
     using System.Linq;
-    using FurnitureFactory.Data;
+    using Data;
     using MySql.Models;
     using Newtonsoft.Json;
 

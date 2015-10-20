@@ -55,8 +55,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DataImporters\SalesReportsImporter.cs" />
-    <Compile Include="DataImporters\SalesReportsMySqlImporter.cs" />
-    <Compile Include="IImporter.cs" />
     <Compile Include="IUserInterfaceHandlerIO.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -69,9 +67,9 @@
       <Project>{1c2d56cf-be75-40b3-88ae-ab13ddbd3f67}</Project>
       <Name>FileSystemUtils</Name>
     </ProjectReference>
-    <ProjectReference Include="..\FurnitureFactory.Data.Json\FurnitureFactory.Data.Json.csproj">
+    <ProjectReference Include="..\FurnitureFactory.Data.Json\FurnitureFactory.Data.Reports.csproj">
       <Project>{386e8cc5-c0b2-4e6e-bee5-d6e5bd046964}</Project>
-      <Name>FurnitureFactory.Data.Json</Name>
+      <Name>FurnitureFactory.Data.Reports</Name>
     </ProjectReference>
     <ProjectReference Include="..\FurnitureFactory.Data.MySql\FurnitureFactory.Data.MySql.csproj">
       <Project>{f9c06877-e9ab-43b8-b126-e3efaf869e70}</Project>

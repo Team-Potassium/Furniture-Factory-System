@@ -1,4 +1,4 @@
-﻿namespace FurnitureFactory.Data.Xml.Exporters
+﻿namespace FurnitureFactory.Data.Manager.Exporters
 {
     using System;
     using System.Linq;

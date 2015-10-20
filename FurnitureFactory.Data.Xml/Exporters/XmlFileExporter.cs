@@ -1,9 +1,6 @@
-﻿namespace FurnitureFactory.Data.Xml.Exporters
+﻿namespace FurnitureFactory.Data.Manager.Exporters
 {
-    using System;
     using System.IO;
-    using System.Linq;
-    using System.Xml.Linq;
 
     public abstract class XmlFileExporter
     {

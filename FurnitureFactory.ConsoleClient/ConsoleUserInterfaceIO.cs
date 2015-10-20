@@ -4,7 +4,7 @@
     using System.Text;
     using Logic;
 
-    public class ConsoleUserInterfaceIO : IUserInterfaceHandlerIO
+    public class ConsoleUserInterfaceIO : Logic.IUserInterfaceHandlerIO
     {
         public string GetInput()
         {

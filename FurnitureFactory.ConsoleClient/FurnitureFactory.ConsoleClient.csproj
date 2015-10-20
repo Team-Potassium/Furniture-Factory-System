@@ -85,6 +85,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include=".cs" />
     <Compile Include="StartUp.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ConsoleUserInterfaceIO.cs" />
@@ -100,13 +101,9 @@
       <Project>{1c2d56cf-be75-40b3-88ae-ab13ddbd3f67}</Project>
       <Name>FileSystemUtils</Name>
     </ProjectReference>
-    <ProjectReference Include="..\FurnitureFactory.Data.Export\FurnitureFactory.Data.Export.csproj">
-      <Project>{d2101016-ad1f-40ac-bb6c-7840e21129a3}</Project>
-      <Name>FurnitureFactory.Data.Export</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\FurnitureFactory.Data.Json\FurnitureFactory.Data.Json.csproj">
+    <ProjectReference Include="..\FurnitureFactory.Data.Json\FurnitureFactory.Data.Reports.csproj">
       <Project>{386e8cc5-c0b2-4e6e-bee5-d6e5bd046964}</Project>
-      <Name>FurnitureFactory.Data.Json</Name>
+      <Name>FurnitureFactory.Data.Reports</Name>
     </ProjectReference>
     <ProjectReference Include="..\FurnitureFactory.Data.MongoDb\FurnitureFactory.Data.MongoDb.csproj">
       <Project>{5e8e282d-269d-4aee-b9eb-cad7a4ebe2d7}</Project>
@@ -116,9 +113,9 @@
       <Project>{f9c06877-e9ab-43b8-b126-e3efaf869e70}</Project>
       <Name>FurnitureFactory.Data.MySql</Name>
     </ProjectReference>
-    <ProjectReference Include="..\FurnitureFactory.Data.Xml\FurnitureFactory.Data.Xml.csproj">
+    <ProjectReference Include="..\FurnitureFactory.Data.Xml\FurnitureFactory.Data.Manager.csproj">
       <Project>{36d707ed-3655-4e86-9d8b-b0cfaab57e8c}</Project>
-      <Name>FurnitureFactory.Data.Xml</Name>
+      <Name>FurnitureFactory.Data.Manager</Name>
     </ProjectReference>
     <ProjectReference Include="..\FurnitureFactory.Data\FurnitureFactory.Data.csproj">
       <Project>{ae84bf50-daeb-49c6-b4de-f09fa8b15fee}</Project>

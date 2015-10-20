@@ -1,15 +1,15 @@
 ﻿namespace FurnitureFactory.ConsoleClient
 {
     using System.Linq;
+    using Data.Manager.Exporters;
+    using Data.Manager.Importers;
     using FileSystemUtils.FileLoaders;
     using FurnitureFactory.Data;
-    using FurnitureFactory.Data.Json;
-    using FurnitureFactory.Data.Xml.Exporters;
-    using FurnitureFactory.Data.Xml.Importers;
     using FurnitureFactory.Logic.DataImporters;
     using FurnitureFactory.Logic.Exporters;
     using Data.MongoDb;
     using Data.MySql;
+    using Data.Reports;
     using Logic;
 
     public class StartUp
@@ -19,18 +19,19 @@
         public static void Main()
         {
             var db = new FurnitureFactoryDbContext();
-            ConsoleUserInterfaceIO io = new ConsoleUserInterfaceIO();
+            Logic.IUserInterfaceHandlerIO io = new ConsoleUserInterfaceIO();
 
-            //db.Database.Delete();
-            //db.Database.Create();
+            db.Database.Delete();
+            db.Database.Create();
 
-            //var mongodata = new MongoDbData(DatabaseName, io);
-            //mongodata.Import(db);
-            //// Load excel from zip - Task1
-            //LoadSalesReports();
+            var mongodata = new MongoDbData(DatabaseName, io);
+            mongodata.Import(db);
+            // Load excel from zip - Task1
+            LoadSalesReports();
 
-            //new MaterialsXmlImporter().Import();
-            //new ProductionDetailsXmlImporter().Import();
+            new MaterialsXmlImporter().Import();
+            new ProductionDetailsXmlImporter().Import();
+            new RoomsXmlMongoImporter().Import(io);
 
             PdfExporter pdfExporter = new PdfExporter(db);
             pdfExporter.GeneratePdf();
@@ -39,11 +40,6 @@
                 .Where(x => x.RoomId == 1)
                 .Select(x => x.Series.Name)
                 .ToList();
-
-            // Output must be: ALVIS \n  396    Tests, huh? :D
-
-            //io.SetOutput(furnituresForBedroom.FirstOrDefault());
-            //io.SetOutput(db.Products.Count());
 
             //// Task 4.1
             var jsonReporter = new JsonProductsReporter(db);
@@ -59,13 +55,6 @@
 
             var ordersXmlReport = new OrdersXmlFileExporter(db);
             ordersXmlReport.GetXmlReport();
-
-            //// import XML file
-            //var importProducts = new ProductsXmlFileImporter();
-            //importProducts.ImportXmlData("../../../Xml-Data.xml");
-
-
-
         }
 
         private static void LoadSalesReports()

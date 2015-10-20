@@ -8,9 +8,14 @@
     {
         private static MongoDataManager instance = null;
 
-        private MongoDataManager(MongoDatabase database)
+        public MongoDataManager(MongoDatabase database)
         {
             this.Database = database;
+        }
+
+        public MongoDataManager()
+            :this(new MongoDbConnection().Database)
+        {
         }
 
         public MongoDatabase Database { get; set; }

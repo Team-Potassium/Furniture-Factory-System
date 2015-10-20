@@ -7,8 +7,8 @@
     <ProjectGuid>{386E8CC5-C0B2-4E6E-BEE5-D6E5BD046964}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>FurnitureFactory.Data.Json</RootNamespace>
-    <AssemblyName>FurnitureFactory.Data.Json</AssemblyName>
+    <RootNamespace>FurnitureFactory.Data.Reports</RootNamespace>
+    <AssemblyName>FurnitureFactory.Data.Reports</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>

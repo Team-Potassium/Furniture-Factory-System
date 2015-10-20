@@ -1,0 +1,11 @@
+<rooms>
+  <room>
+    <name>Kitchen</name>
+   </room>
+  <room>
+    <name>Batchroom</name>
+  </room>
+  <room>
+    <name>Garden</name>
+  </room>
+</rooms>
