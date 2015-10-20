@@ -9,7 +9,7 @@
     /// <summary>
     /// Extracts all .xls files from zip archive to destination path.
     /// </summary>
-    public class ZipArchiveLoader : IArchiveLoader
+    public class ZipArchiveLoader : IFileLoader
     {
         private readonly string fileExtension = "zip";
 

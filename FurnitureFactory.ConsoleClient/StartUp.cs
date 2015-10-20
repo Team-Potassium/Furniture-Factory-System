@@ -15,6 +15,7 @@
     public class StartUp
     {
         private const string DatabaseName = "furnitures";
+        private const string SourceSalesReportsArchiveFilePath = @"..\..\..\Sales-Reports.zip";
 
         public static void Main()
         {
@@ -62,17 +63,16 @@
 
 
             // Load excel from zip - Task1
-            LoadSalesReports();
+
+            LoadSalesReports(SourceSalesReportsArchiveFilePath);
         }
 
-        private static void LoadSalesReports()
+        public static void LoadSalesReports(string sourceArchiveFilePath)
         {
-            string sourceArchiveFilePath = @"..\..\..\Sales-Reports.zip";
-
-            var salesReportLoader = new SalesReportsImporter();
+            var salesReportImporter = new SalesReportsImporter();
 
             var excelFileLoader = new ExcelFileLoader();
-            excelFileLoader.AddDataLoader(salesReportLoader);
+            excelFileLoader.AddDataImporter(salesReportImporter);
 
             var zipArchiveLoader = new ZipArchiveLoader();
             zipArchiveLoader.AddFileLoader(excelFileLoader);

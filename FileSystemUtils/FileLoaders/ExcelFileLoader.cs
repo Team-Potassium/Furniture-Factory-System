@@ -10,7 +10,7 @@
     {
         private readonly string fileExtension = "xls";
 
-        private List<IDataImporter> dataLoaders = new List<IDataImporter>();
+        private List<IDataImporter> dataImporters = new List<IDataImporter>();
 
         public string FileExtension
         {
@@ -52,7 +52,7 @@
 
                 using (reader)
                 {
-                    foreach (var dataLoader in this.dataLoaders)
+                    foreach (var dataLoader in this.dataImporters)
                     {
                         while (reader.Read())
                         {
@@ -72,16 +72,16 @@
 
                 // this is needed to make all changes left in the dataLoader`s DbContexts to be sent to the DataBase
                 // and reset the dataLoaders for next next use
-                foreach (var dataLoader in this.dataLoaders)
+                foreach (var dataLoader in this.dataImporters)
                 {
                     dataLoader.FinalizeImporting();
                 }
             }
         }
 
-        public void AddDataLoader(IDataImporter dataLoader)
+        public void AddDataImporter(IDataImporter dataLoader)
         {
-            this.dataLoaders.Add(dataLoader);
+            this.dataImporters.Add(dataLoader);
         }
     }
 }

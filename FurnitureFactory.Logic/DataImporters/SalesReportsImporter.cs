@@ -29,6 +29,11 @@
         /// <param name="data"></param>
         public void ImportData(IList<object> data)
         {
+            if (data.Count == 0)
+            {
+                throw new ArgumentOutOfRangeException();
+            }
+
             // means we start a new file (assuming first row is always empty
             if (data[0] == null) 
             {
@@ -36,7 +41,8 @@
                 this.clientId = -1; 
                 return;
             }
-            else if (this.clientId == -1)
+            
+            if (this.clientId == -1)
             {
                 var client = new Client()
                 {
@@ -53,7 +59,13 @@
                 this.clientId = this.db.Clients.First(x => x.Name == client.Name).Id;
                 return;
             }
-            else if (data[0].ToString().Contains("ProductID"))
+
+            if (data.Count < 4)
+            {
+                throw new ArgumentOutOfRangeException("Data record should have at least 4 fields");
+            }
+
+            if (data[0].ToString().Contains("ProductID"))
             {
                 return;
             }
