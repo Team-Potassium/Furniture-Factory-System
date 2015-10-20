@@ -25,6 +25,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FurnitureFactory.Data.Xml",
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FileSystemUtils", "FileSystemUtils\FileSystemUtils.csproj", "{1C2D56CF-BE75-40B3-88AE-AB13DDBD3F67}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FurnitureFactory.Data.SqLite", "FurnitureFactory.Data.SqLite\FurnitureFactory.Data.SqLite.csproj", "{EB62B2F3-C5AF-4454-A5C3-FB7B0E3C1D51}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -75,6 +77,10 @@ Global
 		{1C2D56CF-BE75-40B3-88AE-AB13DDBD3F67}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1C2D56CF-BE75-40B3-88AE-AB13DDBD3F67}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1C2D56CF-BE75-40B3-88AE-AB13DDBD3F67}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EB62B2F3-C5AF-4454-A5C3-FB7B0E3C1D51}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EB62B2F3-C5AF-4454-A5C3-FB7B0E3C1D51}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EB62B2F3-C5AF-4454-A5C3-FB7B0E3C1D51}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EB62B2F3-C5AF-4454-A5C3-FB7B0E3C1D51}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
