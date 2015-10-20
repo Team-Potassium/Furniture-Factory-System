@@ -10,7 +10,5 @@
         string FileExtension { get; }
 
         void Load(string filePath);
-
-        void AddDataLoader(IDataImporter dataLoader);
     }
 }

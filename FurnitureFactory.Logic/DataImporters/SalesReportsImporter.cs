@@ -13,9 +13,15 @@
         private FurnitureFactoryDbContext db = new FurnitureFactoryDbContext();
         private int databaseMonitoredOrders = 0;
 
+        public FurnitureFactoryDbContext Db
+        {
+            get { return this.db; }
+            set { this.db = value; }
+        }
+
         /// <summary>
         /// The method imports data to the sql server database. It checks whether such customer exists
-        /// and adds it to customers DbSet if necessary otherwise gets its id to use for orders. 
+        /// and adds it to customers DbSet if necessary and gets its id to use for orders. 
         /// So you can`t add the same customer twice to Customers DbSet, say if you load two different xls reports from the same customer.
         /// But it does not check for duplication of orders.
         /// So the same orders can be added to Orders DbSet twice if we load the same xls report file twice from a particular Customer.
@@ -23,6 +29,11 @@
         /// <param name="data"></param>
         public void ImportData(IList<object> data)
         {
+            if (data.Count == 0)
+            {
+                throw new ArgumentOutOfRangeException();
+            }
+
             // means we start a new file (assuming first row is always empty
             if (data[0] == null) 
             {
@@ -30,7 +41,8 @@
                 this.clientId = -1; 
                 return;
             }
-            else if (this.clientId == -1)
+            
+            if (this.clientId == -1)
             {
                 var client = new Client()
                 {
@@ -47,7 +59,13 @@
                 this.clientId = this.db.Clients.First(x => x.Name == client.Name).Id;
                 return;
             }
-            else if (data[0].ToString().Contains("ProductID"))
+
+            if (data.Count < 4)
+            {
+                throw new ArgumentOutOfRangeException("Data record should have at least 4 fields");
+            }
+
+            if (data[0].ToString().Contains("ProductID"))
             {
                 return;
             }
@@ -58,7 +76,7 @@
                 ClientId = this.clientId,
                 Quantity = int.Parse(data[1].ToString()),
                 Price = decimal.Parse(data[3].ToString()),
-                DeliveryDate = DateTime.Now
+                DeliveryDate = (DateTime)data[data.Count-1]
             };
 
             this.db.Orders.Add(order);

@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("ReadZipXmlData")]
+[assembly: AssemblyTitle("FurnitureFactory.Logic.Tests")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("ReadZipXmlData")]
+[assembly: AssemblyProduct("FurnitureFactory.Logic.Tests")]
 [assembly: AssemblyCopyright("Copyright ©  2015")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("850000c8-d63b-46a6-ba14-30f07f1fc913")]
+[assembly: Guid("1a934b59-eb18-486d-9621-c1d0292a78a3")]
 
 // Version information for an assembly consists of the following four values:
 //

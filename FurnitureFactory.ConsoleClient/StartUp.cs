@@ -15,9 +15,11 @@
     public class StartUp
     {
         private const string DatabaseName = "furnitures";
+        private const string SourceSalesReportsArchiveFilePath = @"..\..\..\Sales-Reports.zip";
 
         public static void Main()
         {
+
             var db = new FurnitureFactoryDbContext();
             ConsoleUserInterfaceIO io = new ConsoleUserInterfaceIO();
 
@@ -46,8 +48,8 @@
             //io.SetOutput(db.Products.Count());
 
             //// Task 4.1
-            var jsonReporter = new JsonProductsReporter(db);
-            jsonReporter.GetJsonReport().Load();
+            //var jsonReporter = new JsonProductsReporter(db);
+            //jsonReporter.GetJsonReport().Load();
 
             //// Task 4.2
             //var mySqlImporter = new SalesReportsMySqlImporter(io);
@@ -65,17 +67,17 @@
             //importProducts.ImportXmlData("../../../Xml-Data.xml");
 
 
+            // Load excel from zip - Task1
 
+            LoadSalesReports(SourceSalesReportsArchiveFilePath);
         }
 
-        private static void LoadSalesReports()
+        public static void LoadSalesReports(string sourceArchiveFilePath)
         {
-            string sourceArchiveFilePath = @"..\..\..\Sales-Reports.zip";
-
-            var salesReportLoader = new SalesReportsImporter();
+            var salesReportImporter = new SalesReportsImporter();
 
             var excelFileLoader = new ExcelFileLoader();
-            excelFileLoader.AddDataLoader(salesReportLoader);
+            excelFileLoader.AddDataImporter(salesReportImporter);
 
             var zipArchiveLoader = new ZipArchiveLoader();
             zipArchiveLoader.AddFileLoader(excelFileLoader);
