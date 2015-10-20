@@ -21,11 +21,15 @@
             var db = new FurnitureFactoryDbContext();
             ConsoleUserInterfaceIO io = new ConsoleUserInterfaceIO();
 
-            //db.Database.Delete();
-            //db.Database.Create();
+            db.Database.Delete();
+            db.Database.Create();
 
-            //var mongodata = new MongoDbData(DatabaseName, io);
-            //mongodata.Import(db);
+            var mongodata = new MongoDbData(DatabaseName, io);
+            mongodata.Import(db);
+            // Load excel from zip - Task1
+            LoadSalesReports();
+
+            new MaterialsXmlImporter().Import();
 
             //PdfExporter pdfExporter = new PdfExporter(db);
             //pdfExporter.GeneratePdf();
@@ -37,18 +41,18 @@
 
             // Output must be: ALVIS \n  396    Tests, huh? :D
 
-            io.SetOutput(furnituresForBedroom.FirstOrDefault());
-            io.SetOutput(db.Products.Count());
+            //io.SetOutput(furnituresForBedroom.FirstOrDefault());
+            //io.SetOutput(db.Products.Count());
 
-            // task 4.1
+            //// Task 4.1
             var jsonReporter = new JsonProductsReporter(db);
             jsonReporter.GetJsonReport().Load();
 
-            // task 4.2
+            //// Task 4.2
             //var mySqlImporter = new SalesReportsMySqlImporter(io);
             //mySqlImporter.Save();
 
-            //// Generate Xml Report in Xml-Exports folder
+            //// Task 3. Generate Xml Report in Xml-Exports folder
             var productXmlReport = new ProductsXmlFileExporter(db);
             productXmlReport.GetXmlReport();
 
@@ -60,8 +64,7 @@
             //importProducts.ImportXmlData("../../../Xml-Data.xml");
 
 
-            // Load excel from zip - Task1
-            // LoadSalesReports();
+
         }
 
         private static void LoadSalesReports()

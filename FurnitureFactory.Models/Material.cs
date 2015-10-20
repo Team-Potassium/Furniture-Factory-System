@@ -8,6 +8,6 @@
 
         public decimal PricePerUnit { get; set; }
 
-        public MeasurementUnits MeasurementUnit { get; set; }
+        public string MeasurementUnit { get; set; }
     }
 }

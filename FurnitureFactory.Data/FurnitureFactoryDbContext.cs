@@ -1,6 +1,7 @@
 ﻿namespace FurnitureFactory.Data
 {
     using System.Data.Entity;
+    using System.Security.Cryptography.X509Certificates;
     using FurnitureFactory.Models;
     using Migrations;
 
@@ -36,14 +37,19 @@
                 .WillCascadeOnDelete(false);
 
             modelBuilder.Entity<Product>()
-               .HasOptional(x => x.Series)
-               .WithMany()
-               .WillCascadeOnDelete(false);
+                .HasOptional(x => x.Series)
+                .WithMany()
+                .WillCascadeOnDelete(false);
 
-             modelBuilder.Entity<Product>()
+            modelBuilder.Entity<Product>()
                 .HasOptional(x => x.Room)
                 .WithMany()
                 .WillCascadeOnDelete(false);
+            }
+
+        public new void SaveChanges()
+        {
+            base.SaveChanges();
         }
     }
 }
