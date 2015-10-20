@@ -18,6 +18,7 @@
 
         public static void Main()
         {
+
             var db = new FurnitureFactoryDbContext();
             ConsoleUserInterfaceIO io = new ConsoleUserInterfaceIO();
 
@@ -61,7 +62,7 @@
 
 
             // Load excel from zip - Task1
-            // LoadSalesReports();
+            LoadSalesReports();
         }
 
         private static void LoadSalesReports()

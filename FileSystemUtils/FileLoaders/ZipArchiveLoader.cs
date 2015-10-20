@@ -38,10 +38,12 @@
                 Directory.CreateDirectory(targetPath);
             }
 
-            // this will keep the directory structure
+            // this will keep the directory structure and extract all files at once. 
+            // I`m not using this method for performance reasons.
+
             //ZipFile.ExtractToDirectory(sourceFilePath, targetPath);
 
-            // this will simply extract all the .xls files in the target root dir
+            // this will extract each .xls file in temp dir, then load its data, then delete the extracted file, then continue to the next.
             using (ZipArchive archive = ZipFile.OpenRead(sourceFilePath))
             {
                 foreach (ZipArchiveEntry entry in archive.Entries)
