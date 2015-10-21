@@ -68,9 +68,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\FurnitureFactory.Logic\FurnitureFactory.Logic.csproj">
+    <ProjectReference Include="..\FurnitureFactory.Logic\FurnitureFactory.Utils.csproj">
       <Project>{6ea4789a-b012-4146-9687-03c40430d6d2}</Project>
-      <Name>FurnitureFactory.Logic</Name>
+      <Name>FurnitureFactory.Utils</Name>
     </ProjectReference>
     <ProjectReference Include="..\FurnitureFactory.Models\FurnitureFactory.Models.csproj">
       <Project>{b687796c-baf8-42a3-b931-86c99c90de52}</Project>

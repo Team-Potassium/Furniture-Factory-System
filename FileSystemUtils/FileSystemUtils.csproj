@@ -55,7 +55,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="FileLoaders\Contracts\IArchiveLoader.cs" />
     <Compile Include="FileLoaders\Contracts\IFileLoader.cs" />
     <Compile Include="Contracts\IDataImporter.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

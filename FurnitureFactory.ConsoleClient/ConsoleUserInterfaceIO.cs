@@ -2,9 +2,9 @@
 {
     using System;
     using System.Text;
-    using Logic;
+    using Utils;
 
-    public class ConsoleUserInterfaceIO : Logic.IUserInterfaceHandlerIO
+    public class ConsoleUserInterfaceIO : Utils.IUserInterfaceHandlerIO
     {
         public string GetInput()
         {

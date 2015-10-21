@@ -5,29 +5,25 @@
     using Data.Manager.Importers;
     using FileSystemUtils.FileLoaders;
     using FurnitureFactory.Data;
-    using FurnitureFactory.Logic.DataImporters;
-    using FurnitureFactory.Logic.Exporters;
     using Data.MongoDb;
     using Data.MySql;
-    using Data.Reports;
-    using Logic;
+    using Utils;
 
     public class StartUp
     {
         private const string DatabaseName = "furnitures";
+        private const string SourceSalesReportsArchiveFilePath = @"..\..\..\Resources\Sales-Reports.zip";
 
         public static void Main()
         {
             var db = new FurnitureFactoryDbContext();
-            Logic.IUserInterfaceHandlerIO io = new ConsoleUserInterfaceIO();
-
-            db.Database.Delete();
-            db.Database.Create();
+            Utils.IUserInterfaceHandlerIO io = new ConsoleUserInterfaceIO();
 
             var mongodata = new MongoDbData(DatabaseName, io);
             mongodata.Import(db);
-            // Load excel from zip - Task1
-            LoadSalesReports();
+
+            // Task 1. Load excel from zip
+            LoadSalesReports(SourceSalesReportsArchiveFilePath);
 
             new MaterialsXmlImporter().Import();
             new ProductionDetailsXmlImporter().Import();
@@ -36,16 +32,11 @@
             PdfExporter pdfExporter = new PdfExporter(db);
             pdfExporter.GeneratePdf();
 
-            var furnituresForBedroom = db.Products
-                .Where(x => x.RoomId == 1)
-                .Select(x => x.Series.Name)
-                .ToList();
-
-            //// Task 4.1
+            // Task 4.1
             var jsonReporter = new JsonProductsReporter(db);
             jsonReporter.GetJsonReport().Load();
 
-            //// Task 4.2
+            // Task 4.2
             //var mySqlImporter = new SalesReportsMySqlImporter(io);
             //mySqlImporter.Save();
 
@@ -55,16 +46,15 @@
 
             var ordersXmlReport = new OrdersXmlFileExporter(db);
             ordersXmlReport.GetXmlReport();
+
         }
 
-        private static void LoadSalesReports()
+        public static void LoadSalesReports(string sourceArchiveFilePath)
         {
-            string sourceArchiveFilePath = @"..\..\..\Sales-Reports.zip";
-
-            var salesReportLoader = new SalesReportsImporter();
+            var salesReportImporter = new SalesReportsImporter();
 
             var excelFileLoader = new ExcelFileLoader();
-            excelFileLoader.AddDataLoader(salesReportLoader);
+            excelFileLoader.AddDataImporter(salesReportImporter);
 
             var zipArchiveLoader = new ZipArchiveLoader();
             zipArchiveLoader.AddFileLoader(excelFileLoader);

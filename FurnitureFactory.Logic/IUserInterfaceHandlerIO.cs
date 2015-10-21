@@ -1,4 +1,4 @@
-﻿namespace FurnitureFactory.Logic
+﻿namespace FurnitureFactory.Utils
 {
     public interface IUserInterfaceHandlerIO
     {

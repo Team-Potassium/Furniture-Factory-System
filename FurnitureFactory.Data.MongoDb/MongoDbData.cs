@@ -1,7 +1,7 @@
 ﻿namespace FurnitureFactory.Data.MongoDb
 {
     using System.Data.Entity;
-    using Logic;
+    using Utils;
 
     // TODO: Singleton
     public class MongoDbData

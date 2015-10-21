@@ -1,4 +1,4 @@
-﻿namespace FurnitureFactory.Data.Reports
+﻿﻿namespace FurnitureFactory.Data.Reports
 {
     using System.Collections.Generic;
 

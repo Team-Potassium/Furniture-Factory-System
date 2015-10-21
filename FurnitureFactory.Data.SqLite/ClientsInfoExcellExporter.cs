@@ -6,10 +6,9 @@
     using Bytescout.Spreadsheet;
     using Bytescout.Spreadsheet.Constants;
 
-
     public class ClientsInfoSqLiteExporter
     {
-        private string documentPath = "../../../CompaniesInfo.xls";
+        private string documentPath = "../../../Reports/Excell/CompaniesInfo.xls";
         private SqLiteData sqliteData;
 
         public ClientsInfoSqLiteExporter()
@@ -19,6 +18,7 @@
 
         public ClientsInfoSqLiteExporter Export()
         {
+            
             var clientsInfo = this.sqliteData.GetAll();
 
             Spreadsheet document = new Spreadsheet();
@@ -74,7 +74,7 @@
         public void Open()
         {
             // open generated XLS document in default program
-            Process.Start("../../../CompaniesInfo.xls");
+          //  Process.Start(documentPath);
         }
     }
 }

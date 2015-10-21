@@ -13,13 +13,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FurnitureFactory.MongoModel
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FurnitureFactory.Data.MongoDb", "FurnitureFactory.Data.MongoDb\FurnitureFactory.Data.MongoDb.csproj", "{5E8E282D-269D-4AEE-B9EB-CAD7A4EBE2D7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FurnitureFactory.Logic", "FurnitureFactory.Logic\FurnitureFactory.Logic.csproj", "{6EA4789A-B012-4146-9687-03C40430D6D2}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FurnitureFactory.Utils", "FurnitureFactory.Logic\FurnitureFactory.Utils.csproj", "{6EA4789A-B012-4146-9687-03C40430D6D2}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FurnitureFactory.Data.MySql", "FurnitureFactory.Data.MySql\FurnitureFactory.Data.MySql.csproj", "{F9C06877-E9AB-43B8-B126-E3EFAF869E70}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FurnitureFactory.Data.Reports", "FurnitureFactory.Data.Json\FurnitureFactory.Data.Reports.csproj", "{386E8CC5-C0B2-4E6E-BEE5-D6E5BD046964}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FurnitureFactory.Data.Manager", "FurnitureFactory.Data.Xml\FurnitureFactory.Data.Manager.csproj", "{36D707ED-3655-4E86-9D8B-B0CFAAB57E8C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FurnitureFactory.Data.Manager", "FurnitureFactory.Data.Manager\FurnitureFactory.Data.Manager.csproj", "{36D707ED-3655-4E86-9D8B-B0CFAAB57E8C}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FileSystemUtils", "FileSystemUtils\FileSystemUtils.csproj", "{1C2D56CF-BE75-40B3-88AE-AB13DDBD3F67}"
 EndProject
@@ -61,10 +59,6 @@ Global
 		{F9C06877-E9AB-43B8-B126-E3EFAF869E70}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F9C06877-E9AB-43B8-B126-E3EFAF869E70}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F9C06877-E9AB-43B8-B126-E3EFAF869E70}.Release|Any CPU.Build.0 = Release|Any CPU
-		{386E8CC5-C0B2-4E6E-BEE5-D6E5BD046964}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{386E8CC5-C0B2-4E6E-BEE5-D6E5BD046964}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{386E8CC5-C0B2-4E6E-BEE5-D6E5BD046964}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{386E8CC5-C0B2-4E6E-BEE5-D6E5BD046964}.Release|Any CPU.Build.0 = Release|Any CPU
 		{36D707ED-3655-4E86-9D8B-B0CFAAB57E8C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{36D707ED-3655-4E86-9D8B-B0CFAAB57E8C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{36D707ED-3655-4E86-9D8B-B0CFAAB57E8C}.Release|Any CPU.ActiveCfg = Release|Any CPU

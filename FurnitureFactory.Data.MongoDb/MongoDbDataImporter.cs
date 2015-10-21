@@ -4,7 +4,7 @@
     using System.Data.Entity;
     using System.Data.Entity.Migrations;
     using System.Linq;
-    using Logic;
+    using Utils;
     using MongoDB.Driver;
     using MongoModels;
 

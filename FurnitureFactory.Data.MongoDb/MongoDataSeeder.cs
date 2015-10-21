@@ -1,7 +1,7 @@
 ﻿namespace FurnitureFactory.Data.MongoDb
 {
     using System.Collections.Generic;
-    using Logic;
+    using Utils;
     using MongoDB.Driver;
     using MongoModels;
 
